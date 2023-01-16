@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Contenido Embebido</title>
+</head>
+<body>
+    <header>
+        <h1>Pruebas de inserto de imagen</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Prueba de imagen con png y gif</h2>
+                <!-- 
+                !DPR (Device Pixel Ratio)
+                    !Es la relación que existe entre los píxeles reales que tiene el dispositivo y los píxeles que tenemos disponibles 
+                # DPR = pixeles reales / pixeles ddisponibles 
+        
+                A la hora de crear una página web para distintos equipos, ya sea en pc o movil, tenemos la opción de usar una imagen que se adapte mejor al dispositivo para hacer esto tenemos el atributo srcset para la etiqueta img. este atributo nos permite agregar un banco de imagenes para que dependiendo de la dpr se use la una o la otra.
+                -->
+                <p>Aqui tenemoss a Chopper del Uan pis y una mona china, los dos en gif</p>
+                <img src="/codigo/practicas/Dorian/contenido-embebido/assets/chopa.png" alt="dibujitodechopa" title="Chopa">
+                <img src="/codigo/practicas/Dorian/contenido-embebido/assets/niñakawai.png" alt="niñakawaimonachina">
+
+                <p>Aqui tenemos a unos gatos random en gif</p>
+                <img src="/codigo/practicas/Dorian/contenido-embebido/assets/galleto.gif" alt="gatogalletagalleto" title="GatoGalleto">
+                <img src="/codigo/practicas/Dorian/contenido-embebido/assets/gato.gif" alt="gato">
+
+                <h2>Prueba de srcset</h2>
+                <p>Aqui vamos a ver la funcioalidad de srcset</p>
+                <img srcset=
+                "/codigo/practicas/Dorian/contenido-embebido/assets/chopa.png 2x,
+                /codigo/practicas/Dorian/contenido-embebido/assets/niñakawai.png 3x" alt="imagenes de prueba">
+            </article>
+
+            <hr>
+            <article>
+                <!--
+                    En este apartado vamos a ver la funcionalidad de la etiqueta <picture> en esencia para esta etiqueta pcupamos los mismos elementos que con img pero para que la imagen en cuestion se muestre requerimos ocupar una imagen de repuesto o copia de seguridad
+                -->
+                <h2>Picture</h2>
+                <picture>
+                    <source <img srcset=
+                    "/codigo/practicas/Dorian/contenido-embebido/assets/chopa.png" media="(max-width:1025)"  alt="imagenes de prueba"> 
+                    <img src="/codigo/practicas/Dorian/contenido-embebido/assets/niñakawai.png" alt="">
+                </picture>
+            </article>
+        </section>
+        
+
+    </main>
+
+</body>
+</html>

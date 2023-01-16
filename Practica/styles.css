@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 5%;
+    background-color: black;
+    color: white;
+}
+a{
+    color: inherit;
+}
+p{
+    width: 70%;
+    height: 300px;
+    border: 1px solid white;
+    position: relative;
+    right: 10px;
+}
+aside{
+    width: 30%;
+    height: 700px;
+    float: right;
+    padding: 30px;
+    position: relative;
+    bottom: 400px;
+    border: 1px solid white;
+    overflow: auto;
+}

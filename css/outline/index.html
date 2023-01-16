@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Outline</title>
+    </head>
+    <body>
+        <header>
+            <h1>Outline</h1>
+        </header>
+        <main>
+            <div class="border1">
+                <p>
+                    Outline es la propiedad que nos permite dibujar un borde por fuera del modelo de caja.
+                </p>
+                <p>
+                    Es un shorthand que engloba:
+                </p>
+                <ul>
+                    <li>
+                        outline-width: Controla el ancho del ouline
+                    </li>
+                    <li>
+                        outline-style: Controla el estilo del outline
+                    </li>
+                    <li>
+                        outline-color: Controla el color del outline
+                    </li>
+                </ul>
+                <p>
+                    Tiene las mísmas propiedades y sintaxis que border, pero con algunas diferencias:
+                </p>
+                <ul>
+                    <li>
+                        No ocupa sitio, ya que no forma parte del box-model
+                    </li>
+                    <li>
+                        No se puede redondear
+                    </li>
+                    <li>
+                        No se pueden controlar los lados de forma independiente
+
+                    </li>
+                    <li>
+                        También cuenta con la propiedad outline-offset, que nos permite aumentar o disminuir la distancia del outline respecto a la caja a la que pertence
+                    </li>
+                </ul>
+            </div>
+            <div class="border">
+                Border <br>
+                Borde dentro de la misma caja
+            </div>
+            <div class="outline">
+                Outline <br>
+                "Borde" fuera de la caja
+            </div>
+        </main>
+    </body>
+</html>

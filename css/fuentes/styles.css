@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "stilo";
+    src: url(assets/fonts/story.ttf);
+}
+body{
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.sans{
+    font-family: sans-serif;
+}
+.cursive{
+    font-family: cursive;
+}
+.mono{
+    font-family: monospace;
+}
+.fantasy{
+    font-family: fantasy;
+}
+.fonts{
+    font-family: 'Raleway','Passions Conflict', cursive;
+    font-weight: 100;
+}
+
+.icon{
+    color: lime;
+    font-size: 2rem;
+}
+.fontface{
+    font-family: "stilo";
+}
+.tr1{
+    text-transform: none;
+}
+.tr2{
+    text-transform:uppercase ;
+}
+.tr3{
+    text-transform: lowercase;
+}
+.tr4{
+    text-transform: capitalize;
+}
+.td1{
+    text-decoration: none;
+}
+.td2{
+    text-decoration: underline;
+}
+.td3{
+    text-decoration: overline;
+}
+.td4{
+    text-decoration: line-through;
+}
+.shadow{
+    text-shadow: 2px 2px 5px lime;
+}
+.ls{
+    letter-spacing: 5px;
+}
+.ws{
+    word-spacing: 2rem;
+}
+.lh{
+    line-height: 2rem;
+}
+.wm{
+    writing-mode: vertical-lr;
+}

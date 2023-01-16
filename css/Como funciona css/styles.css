@@ -1,0 +1,65 @@
+body{
+    background-color: gray;
+}
+
+pre{
+    color:blanchedalmond ;
+}
+
+h1{
+    background-color: red;
+}
+/* specificity 0,0,1 */
+
+.title{
+    background-color: green;
+}
+/* specificity 0,1,0 */
+
+#title{
+    background-color: blue;
+}
+/* specificity 1,0,0 */
+
+h1.title{
+    background-color: black;
+}
+/* specificity 0,1,1 */
+
+h1#title{
+    background-color: cornsilk;
+}
+/* specificity 1,0,1 */
+
+.title#title{
+    background-color: darkblue;
+}
+/* specificity 1,1,0 */
+
+h1.title#title{
+    background-color: blueviolet;
+}
+/* specificity 1,1,1 */
+
+.text{
+    color: darkgreen;
+}
+
+.link{
+    color: cyan;
+}
+ 
+.link2{
+    color: inherit;
+    background-color: bisque;
+}
+div{
+    background-color: rgb(21, 158, 204);
+}
+ul{
+    background-color: aqua;
+    color: crimson;
+}
+.list2{
+    color: initial;
+}

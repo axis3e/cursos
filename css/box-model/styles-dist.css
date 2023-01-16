@@ -1,0 +1,32 @@
+body{
+    background-color: #000;
+    color: rgb(255, 255, 255);
+}
+img{
+    width: 75%;
+}
+.block{
+    background-color: purple;
+    width: 30em;
+    height: 25em;
+}
+.inline{
+    background-color: rgb(167, 13, 13);
+    color: inherit;
+}
+
+.bloque{
+    background-color: rgb(106, 80, 255);
+    margin: 100px 100px 100px 100px;
+}
+
+.linea1{
+    color: coral;
+    background-color: rgb(84, 77, 185);
+    margin: 20px;
+}
+.linea{
+    color: rgb(31, 24, 83);
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+}

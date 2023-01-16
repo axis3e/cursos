@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Box Model</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Box Model</h1>
+            <img src="assets/captura.png" alt="box-model" title="box-model">
+        </header>
+        <main>
+            <section>
+                <header>
+                    <h2>Width y Height</h2>
+                </header>
+                <p>
+                    Empecemos trabajando con el width y el height en un modelo de caja, estos atributos nos ayudan a cambiar tanto el ancho como el alto de nuestra caja, recordemos que cada elemento de nuestro codigo se representa mediante cajas, independientemente del contenido que podamos encontrar dentro de la caja.
+                </p>
+                <div class="block">
+                    <h3>Elemento de bloque</h3>
+                    
+                    <p>
+                        Tambien recordemos que en html tenemos elementos de bloque (que son aquellos que usan toda la linea del navegador), a los cuales sí vamos a poder cambirles el tamaño y las especificaciones.
+                    </p>
+                    <pre>
+                        <code>
+                            codigo html
+                            &#60;div class="block"&#62;
+                                &#60;h2>Elemento de bloque&#60;/h2>
+                                
+                                &#60;p>
+                                    Ejemplo
+                                &#60;/p>
+                                <br>
+                            Código Css   
+                            .block{
+                                background-color: purple;
+                                width: 30em;
+                                height: 15em;
+                            }   
+                        </code>
+                    </pre>
+    
+                </div>
+                <br>
+                <div>
+                    <h3>Elemento de linea</h3>
+                    <p>
+                        <a href="x" class="inline">Mientras que al otro tipo de elemento, el sual se denomina "Elemento de Linea" no podemos cambiar su configuracion de ancho y alto, ya que abarca solamente el contenido que está dedntro de la etiqueta</a>
+        
+                    </p>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <h2>Margin</h2>
+                </header>
+                <p>
+                    Es la propiedad que nos permite generar espacio entre elementos<br>
+                    Es un shorthand (propiedad abreviada)que controla los 4 lados posibles a los que dar márgenes:
+                </p>
+                <ul>
+                    <li>margin-top: Margen superior</li>
+                    <li>margin-right: Margen derecho</li>
+                    <li>margin-bottom: Margen inferior</li>
+                    <li>margin-left: Margen izquierdo</li>
+                </ul>
+                <p>
+                    Admite hasta 4 valores que van en el orden de las agujas de reloj, es decir: arrriba, derecha, abajo e izquierda. <br>
+                    Lo que quiere decir que podemos configurar de diferentes manera el margen, dependiendo del número de valores que agreguemos, entre más usemos, más especifica podrá ser eesta configuración:                
+                </p>
+                <ul>
+                    <li>4 valores -> margin: top right bottom left</li>
+                    <li>3 valores -> margin: top right/left bottom</li>
+                    <li>2 valores -> margin: top/bottom right/left</li>
+                    <li>1 valor -> margin: top/right/bottom/left</li>
+                </ul>
+                <p class="bloque">
+                    A la hora de usar los margenes debemos tener cuidado y tención, ya que no funcionan igual en elementos de bloque y elementos de linea. <br>
+                    En este ejemplo (class:"bloque) podemos notar que al ser un elemento de bloque, este parrafo tiene margen en las 4 direcciones:
+                </p>
+                <pre>
+                    <code>
+                        .bloque{
+                            background-color: rgb(106, 80, 255);
+                            margin: 100px 100px 100px 100px;
+                        }
+                    </code>
+                </pre>
+                <p>
+                    Para los elementos de linea, el valor "top" y el valor "bottom" no funcionan, ya que como se había mencionado antes, son elementos que etán sobre la misma linea y no pueden afectar a todo el bloque en el que se encuentran, así que al darles estilo de margin, quedan así: <br>
+                    
+                    <a href="z" class="linea1">Elemento .linea1</a><a href="z" class="linea">Elemento .linea</a>
+                </p>
+                <pre>
+                    <code>
+                        .linea1{
+                            color: coral;
+                            background-color: rgb(84, 77, 185);
+                            margin: 20px;
+                        }
+                        .linea{
+                            color: rgb(31, 24, 83);
+                            background-color: rgb(255, 255, 255);
+                            margin: 10px;
+                        }
+                    </code>
+                </pre>
+                <article>
+                    <header>
+                        <h3>Más elementos de margin</h3>
+                    </header>
+                    <p class="block2">Algunas caracteristicas adicionales que podemos usar con margin es el poder darle un margen automatico a los elementos de bloque</p>
+                    <p class="block3">Para esto, debemos haberle dado con anterioridad dimension al elemento de bloque, ya que si no lo hemos hecho, no será posible lograr lo deseado, ya que el elemento de bloque por defecto, abarca toda la página del navegador:</p>
+                    <pre>
+                        <code>
+                            .block3{
+                                background-color: chocolate;
+                                width: 300px;
+                                height: 150px;
+                                margin-left: auto;
+                            }
+                        </code>
+                    </pre>
+                    <p class="block4">Si usamos más de un solo margen por defecto (hablando de margenes horizontales) vamos a poder centrar el elemento de bloque</p>
+                    <pre>
+                        <code>
+                            .block4{
+                                background-color: darksalmon;
+                                color: #000;
+                                width: 300px;
+                                height: 150px;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                        </code>
+                    </pre>
+                </article>
+            </section>
+            <section>
+                <h2>Padding</h2>
+                <p>
+                    Es la propiedad que nos permite generar espacio interno entre el borde y la caja <br>
+                    Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar padding
+                </p>
+                <ul>
+                    <li>padding-top-> Padding superior</li>
+                    <li>padding-right-> Padding derecho</li>
+                    <li>padding-buttom-> Padding inferior</li>
+                    <li>padding-left-> Padding izquierdo</li>
+                </ul>
+
+                <p>
+                    Admite hasta 4 valores que van en el orden de las agujas de reloj, es decir: arrriba, derecha, abajo e izquierda. <br>
+                    Lo que quiere decir que podemos configurar de diferentes manera el padding, dependiendo del número de valores que agreguemos, entre más usemos, más especifica podrá ser eesta configuración:                
+                </p>
+                <ul>
+                    <li>4 valores -> padding: top right bottom left</li>
+                    <li>3 valores -> padding: top right/left bottom</li>
+                    <li>2 valores -> padding: top/bottom right/left</li>
+                    <li>1 valor -> padding: top/right/bottom/left</li>
+                </ul>
+                <pre>
+                    <code>
+                        .bloc{    
+                            background-color: cornflowerblue;
+                            width: 300px;
+                            height: 300px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            margin-bottom: 100px;
+                            padding-top: 100px;
+                            padding-left: 30px;
+                            padding-right: 40px;
+                        }
+                    </code>
+                </pre>
+                <p class="bloc">Este es un elemento de bloque con el margin y el padding modificado</p>
+               
+                <pre>
+                    <code>
+                        .line{
+                            color: black;
+                            background-color: aqua;
+                            margin-left: 100px;
+                            margin-right: auto;
+                            padding-top: 70px;
+                            padding-bottom: 70px;
+                        }
+                    </code>
+                </pre>
+                <br>
+                <p>
+                                       
+                    <a class="line" href="a">Este es un elemento de linea con el margin y el padding modificado</a>
+
+                </p>
+                <div class="div">
+                    <input class="boton" type="button" value="Boton">
+                </div>
+                    <pre>
+                        <code>
+                            .div{
+                                background-color: red;
+                                width: 200px;
+                                height: 200px;
+                                margin-top: 100px;
+                                margin-bottom: 100px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                padding-top: 120px;
+                                padding-left: 120px;
+                                padding-right: 70px;
+                            }
+                            
+                            .boton{
+                                padding: 40px 50px;
+                            }
+                        </code>
+                    </pre>
+            </section>
+            <section>
+                <header>
+                    <h2>Border</h2>
+                </header>
+                <p>
+                    Es la propiedad que nos permite modificar el borde de la caja
+                    Es un shorthand (propiedad abreviada) que agrupa 3 propiedades
+                </p>
+                <ul>
+                    <li>
+                        border-widhth: ancho el borde
+                        <ul>
+                            <li>border-top-width</li>
+                            <li>border-right-width</li>
+                            <li>border-bottom-width</li>
+                            <li>border-left-width</li>
+                        </ul>
+                    </li>
+                    <li>
+                        border-style: estilo del borde
+                        <ul>
+                            <li>border-top-style</li>
+                            <li>border-right-style</li>
+                            <li>border-bottom-style</li>
+                            <li>border-left-style</li>
+                        </ul>
+                                                
+                    </li>
+                    
+                    <li>
+                        border-color: color del borde
+                        <ul>
+                            <li>border-top-color</li>
+                            <li>border-right-color</li>
+                            <li>border-bottom-color</li>
+                            <li>border-left-color</li>
+                        </ul>
+                    </li>
+                </ul>
+                <article>
+                    <h3>Valores para estyle:</h3>
+                    <ul>                        
+                        <li>none (quita bordes)
+                        <li>hidden (quita bordes de manera vsual)
+                        <li>dotted (bordes de puntos)
+                        <li>dashed (borde de rectangulos)
+                        <li>solid (borde solido, comun)
+                        <li>double (borde doble)
+                        <li>groove (borde estilizado)
+                        <li>ridge (borde estilizado)
+                        <li>inset (borde estilizado)
+                        <li>outset (borde estilizado)
+                    </ul>
+                </article>
+                <div class="divsote">
+                    <input type="button" value="soy un botón" class="botonsote">
+                </div>
+                <div class="divsillo">
+                    <input type="button" value="boton-dashed" class="borde1">
+                    <input type="button" value="boton-dotted" class="borde2">
+                    <input type="button" value="boton-double" class="borde3">
+                    <input type="button" value="boton-groove" class="borde4">
+                    <input type="button" value="boton-hidden" class="borde5">
+                    <input type="button" value="boton-none" class="borde6">
+                    <input type="button" value="boton-inset" class="borde7">
+                    <input type="button" value="boton-outset" class="borde8">
+                    <input type="button" value="boton-ridge" class="borde9">
+                    <input type="button" value="boton-solid" class="borde10"></div>
+            </section>
+            <section>
+                <header>
+                    <h2> Box Sizing</h2>
+                    <p>
+                        Es la propiedad que nos permite controlar el cálculo que hace el navegador a la hora de modificar las propiedades content, padding y border.
+                        Los 2 valores que podemos darle son:
+                    </p>
+                    <ul>
+                        <li>content-box -> Valor por defecto</li>
+                        <li>border-box -> Cálculo de tamaño del elemento incluyendo el panding y el border</li>
+                    </ul>
+                    <p>
+                        La función de esta etiqueta es la de determinar el tamaño máximo de nuestra caja, al usar el atributo border-box, vamos a tomar como refrencia el valor asignado a los bordes y de esta manera el navegador modifica el tamaño de la caja.
+                    </p>
+                    <div class="divi">
+                        divi
+                        <input type="button" value="btn" class="btn">
+                    </div>
+                    <pre>
+                        <code>
+                            divi{
+                                width: 10em;
+                                height: 10em;
+                                background-color: brown;
+                                margin-left: auto;
+                                margin-right: auto;
+                                margin-bottom: 3em;
+                                box-sizing: border-box;
+                                padding: 4em;
+                            }
+                            
+                            .btn{
+                                color: white;
+                                background-color: red;
+                                padding: 2em;
+                            
+                            }
+                        </code>
+                    </pre>
+                    <p>
+                        Con esta etiqueta logramos que aún cuando el contenido cambia, el tamaño de la caja no lo hará.
+                    </p>
+                </header>
+            </section>
+        </main>
+    </body>
+</html>

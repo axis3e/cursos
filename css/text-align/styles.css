@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+h1{
+    margin-top: .1px;
+    background-color: dimgrey;
+    padding: 10px;
+}
+.text{
+    text-align: center;
+}
+.box{
+    background-color: aqua;
+    color: black;
+    width: 150px;
+    height: 150px;
+    outline: 8px solid red;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 65px;
+}
+.link{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gainsboro;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.img{
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}

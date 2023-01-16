@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Elementos seleccionables</title>
+</head>
+<!--
+     ! select-> Es una etiqueta, que no es input, pero que nos ayuda a escoger una o varias opciones, hacienda en cierta manera una fusión entre "radio" y ""checkbox 
+
+     ( Datalist-> Los datalist son similares a los select, con la diferencia de que llevan un flitro para hacer una busqueda más sencilla        
+-->
+<body>
+    <header>
+        <h1>Elementos seleccionables</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Ejemplo de uso de select</h2>
+            <form>
+                <!-- Este campo se llena al permitir tener varias opciones y escoger entre ellas-->
+                <select name="babuni">
+                    <option value="callaita">Callaita</option>
+                    <option value="bichiyal">Bichiyal</option>
+                    <option value="mama">Si veo a tu mamá</option>
+                </select>
+            </form>
+            <h3>Con atributo multiple</h3>
+            <form>
+                <!-- Para poder seleccionar más de una opción, tenemos el atributo "multiple" -->
+                <select name="babuni" multiple>
+                    <option value="callaita">Callaita</option>
+                    <option value="bichiyal">Bichiyal</option>
+                    <option value="mama">Si veo a tu mamá</option>
+                    <option value="coco">Un coco</option>
+                </select>
+            </form>
+            <form>
+                <h3>Select con optgroup</h3>
+                <!-- Para agrupar asimismo las opciones tenemos la etiqueta "optgroup" con el atributo "label" para nombrar dicha categoria  -->
+                <select name="mascotas">
+                    <optgroup label="4 patas">
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="conejo">Conejo</option>
+                    </optgroup>
+                    <optgroup label="aves">
+                        <option value="loro">Loro</option>
+                        <option value="canario">Canario</option>
+                    </optgroup>
+                    <optgroup label="otras">
+                        <option value="serpiente">Serpiente</option>
+                        <option value="tarantula">Tarántula</option>
+                    </optgroup>
+                </select>
+            </form>
+            <form>
+                <h3>Select con optgroup y multiple</h3>
+                <!-- Para agrupar asimismo las opciones tenemos la etiqueta "optgroup" con el atributo "label" para nombrar dicha categoria  -->
+                <select name="mascotas" multiple>
+                    <optgroup label="4 patas">
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="conejo">Conejo</option>
+                    </optgroup>
+                    <optgroup label="aves">
+                        <option value="loro">Loro</option>
+                        <option value="canario">Canario</option>
+                    </optgroup>
+                    <optgroup label="otras">
+                        <option value="serpiente">Serpiente</option>
+                        <option value="tarantula">Tarántula</option>
+                    </optgroup>
+                </select>
+            </form>
+        </section>
+        <section>
+            <!-- 
+                Para usar esta etiqueta de manera correcta requerimos de varios elementos:
+                | Emepezamos con un input de tipo "list"
+                ° Vamos a agregar tambien el atributo "list" para asignarle una lista
+                ! luego usaremos la etiqueta <datalist> para poder crear la lista que vamos a asignar a nuestro input
+                # El contenido que vamos a tener dentro de nuestra datalist funciona tal cuyal el contenido de <select> lo que quieere decir que vamos a usar <option> para agregar nuestras opciones
+                $ El atributo <value> nos va a dar la información primaria de nuestra opción y el contenido entre esta etiqueta nos va a proporcionar comentarios o información adicional del mismo
+                
+             -->
+
+            <h2>Ejemplo con datalist</h2>
+            <form>
+                <h3>Mejor canción Bad Bunny</h3>
+                <input type="list" list="babuni">
+                <datalist id="babuni">
+                    <option value="Si veo a tu mamá">YHLQMDLG</option>
+                    <option value="La Dificil">YHLQMDLG</option>
+                    <option value="Ojitos lindos">Un verano sin ti</option>
+                    <option value="Un coco">Un verano sin ti</option>
+                    <option value="Hoy cobré">El ultimo Tour del mundo</option>
+                    <option value="Bunker">El ultimo Tour del mundo</option>
+                </datalist>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

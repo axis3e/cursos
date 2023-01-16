@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Position</title>
+    </head>
+    <body>
+        <header>
+            <nav class="fix">Soy Un Fixed</nav>
+            <h1>Position</h1>
+        </header>
+        <main>
+            <p>
+                La propiedad position nos permite posicionar los elementos. <br>
+                Hay algunos conceptos que debemos conocer para entender position:
+            </p>
+            <ul>
+                <li>Espacio reservado -> Es el espacio que tiene un elemento asignado en el navegador.</li>
+                <li>Elemento posicionado -> Esto significa que el elemento tiene la propiedad position con un valor distinto de "static", que es el valor que tiene esta propiedad por defecto.
+                </li>
+                <li>Stackin context -> Contexto de apilamiento. Es el orden en el que se apilarán las cajas que se superponen, dentro del mismo contenedor.</li>
+            </ul>
+            <p>
+                Al posicionar un elemento se habilitan 5 propiedades que podemos utilizar para mover los elementos en los 3 ejes:
+            </p>
+            <ul>
+                <li>top -> El elemento se moverá desde la parte superior la distancia que le hayamos indicado.</li>
+                <li>right -> El elemento se moverá desde la parte derecha la distancia que le hayamos indicado.</li>
+                <li>bottom -> El elemento se moverá desde la parte inferior la distancia que le hayamos indicado.</li>
+                <li>left -> El elemento se moverá desde la parte izquierda la distancia que le hayamos indicado.</li>
+                <li>z-index -> Nos permite mover el elemento en el contexto de apilamiento (eje z)</li>
+            </ul>
+        </main>
+        <p>
+            NOTA: Si a un elemento le declaramos la propiedad top y/o left, las propiedades bottom y/o right no funcionarán. 
+        </p>
+        <p>
+            Los posibles valores que le podemos dar a position son:
+        </p>
+        <ul>
+            <li>Static -> Es el valor que tiene por defecto un elemento, con este valor el elemento NO ESTÁ POSICIONADO y por lo cual no podremos moverlo</li>
+            <li>Relative </li>
+            <li>Absolute </li>
+            <li>Fixed </li>
+            <li>Sticky</li>
+            <li>z-index</li>
+        </ul>
+        <section class="relative">
+            <h2>Relative</h2>
+            <p>
+                 El elemento mantendrá su posición y medidas en el flujo de renderizado y mantendrá su espacio reservado. Si lo movemos lo hará usando su posición en el html como punto de referencia.
+            </p>
+            <div class="rel box1">Caja 1</div>
+            <div class="rel box2">Caja 2</div>
+        </section>
+        <section class="absolute">
+            <h2>Absolute</h2>
+            <p>
+                El elemento perderá sus medidas y su espacio reservado. Si lo movemos usará el elemento posicionado contenedor como referencia. Si no tiene ninguno, usará el elemento html de referencia. <br>
+                Es importante recordar que solo se tomará en cuenta el contenedor si este está posicionado
+            </p>
+            <div class="abs box3">Caja 3</div>
+            <div class="abs box4">Caja 4</div>
+        </section>
+        <section class="fixed">
+            <h2>Fixed</h2>
+            <p>
+                El elemento perderá sus medidas y su espacio reservado.Si lo movemos usará el elemento html de referencia, y además se quedará fijo en esa posición aunque hagamos scroll. <br>
+                Aquí usamos el ejemplo del menu fltante que dice "Soy Un Fixed"
+            </p>
+        </section>
+        <section class="sticky">
+            <h2 class="sti">Sticky</h2>
+            <p>Es una mezcla de position relative y "fixed". Con este tipo de posicionamiento los valores top, left, bottom y right no sirven para mover el elemento, si no para indicarle en qué punto pasará a tener un comportamiento de posicionamiento similar a fixed, hasta llegar a ese punto se comportará como si no tuviera posicionamiento, aunque sí contará como posicionado si necesitáramos colocar otro elemento respecto a él (absolute)</p>
+            <p><span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, porro ipsam optio maxime iure possimus obcaecati asperiores delectus tenetur vitae odio commodi fugiat mollitia ipsa veritatis alias iusto est id!</span><span>Ex facere quos in a dignissimos itaque neque labore quidem odit, sit aspernatur iure sint fugit, culpa odio similique, error animi nihil sequi harum pariatur? Tempora blanditiis quisquam minus beatae?</span></p>
+            <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quasi minima asperiores provident nulla est officiis reiciendis eos ut debitis dolorem autem aliquam, eveniet architecto eligendi nisi ea magnam corrupti?</span><span>Explicabo dicta non aspernatur laudantium, ad tenetur minus provident sunt illo. Numquam quos deserunt explicabo ipsam corporis soluta laudantium eveniet, quas nihil dolor impedit nostrum debitis doloribus eaque minus ut!</span></p>
+            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sunt perferendis optio tenetur architecto. Voluptatem est non animi culpa molestiae sint numquam possimus dignissimos! Reprehenderit, unde. Repudiandae atque quod sit.</span><span>Maxime quis dolore cum, maiores repellendus perferendis praesentium fugiat recusandae ipsam qui optio animi vel expedita vero quisquam amet asperiores? Consectetur ipsum dolorem vero a optio tempora provident aliquam doloribus.</span></p>
+            <p><span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique illum dignissimos nesciunt cumque dolore consectetur tenetur itaque laudantium praesentium? Officiis maiores sed delectus eligendi et veritatis nesciunt suscipit distinctio ducimus?</span><span>Nobis praesentium rerum cumque suscipit doloremque atque, harum animi iure laudantium voluptates alias illo tenetur nam omnis inventore, voluptas magni nisi autem iste ducimus quis? Error, officiis! Doloremque, ea qui!</span></p>
+            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eum. Pariatur iusto velit nemo nesciunt ipsam enim ullam temporibus dicta! Odit repellendus velit cumque eum numquam sint tempora dolor. Veritatis.</span><span>Necessitatibus obcaecati recusandae blanditiis dolore dignissimos magni, asperiores non nisi ad inventore aspernatur, labore impedit aliquid? Sequi, exercitationem fugiat? Delectus similique id nulla accusamus adipisci impedit omnis, at eius illo.</span></p>
+        </section>
+        <section class="zindex">
+            <h2>Z-Index</h2>
+            <p>
+                Es la propiedad que nos permite ordenar los elementos superpuestos para controlar cual se coloca por delante y cual por detrás. <br>
+                El elemento con un valor mayor será el elemento que esté por encima del otro, si las cajas tienen el mismo valor, seguiran la jerarquia de html, siendo la que este primero la que va por encima
+            </p>
+            <div class="box-1">Caja1</div>
+            <div class="box-2">Caja2</div>
+        </section>
+    </body>
+</html>

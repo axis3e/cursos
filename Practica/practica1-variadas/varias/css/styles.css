@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+/*
+Orden
+Position - Propiedades de posicionamiento
+Box Model - Propiedades del box model
+Text - Propiedades de texto
+Visual - Propiedades visuales (colores, bordes, background...)
+Varios - El resto
+    
+*/
+body{
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: rgb(25, 20, 20);
+}
+.topc{
+    position: absolute;
+    top: -450px;
+    left: -250px;
+}
+.bottomc{
+    position: absolute;
+    bottom: -450px;
+    right: -250px;
+}
+.card{
+    position: relative;
+    top: 15vh;
+    width: 500px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255 255 255);
+    overflow: hidden;
+}
+.header-card{
+    text-align: center;
+}
+.header-image{
+    width: 100%;
+    border-radius: 10px;
+}
+.profile{
+    position: relative;
+    top: -75px;
+    width: 150px;
+    height: 150px;
+    border: 10px solid rgb(25, 20, 20);
+    border-radius: 49%;
+    margin-bottom: -100px
+}
+.body-card{
+    text-align: center;
+    margin-top: 2rem;
+    border-bottom: 1px solid rgb(133, 133, 133);
+}
+.text{
+    font-size: 1.5rem;
+}
+.light{
+    font-size: 1rem;
+    color: rgb(133, 133, 133);
+}
+.logo{
+    position: relative;
+    top: -112px;
+    left: 90px;
+    width: 10%;
+    height: 10%;
+}
+.stats{
+    width: 160px;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}

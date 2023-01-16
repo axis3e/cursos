@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Colapso de Margenes</title>
+    </head>
+    <body>
+        <header>
+            <h1>Colapso de margenes</h1>
+        </header>
+        <main>
+            <div class="box-1">
+                <p class="bloc1">
+                    Existe un problema con los margenes, para el que actualmente no existe una solucion como tal, basada en documentación oficial. Este problema lo podemos ver reflejado en los margenes de los elementos de bloque: <br> 
+                    Al querer dar una separación entre un elemento y el otro, usando margenes, estos no funcionan de la manera que se esperaria, si damos al primer elemento un margin-bottom de 20px y al segundo un margin-top de 10px se esperaria tener una separación de 30px, cosa que no sucede. Para solucionar este problema ded manera practica, se sugiere solamente usar la funcion de margin-bottom con el total de separación que se requiere
+                </p>
+            </div>
+                
+            <div class="box-2">
+                <p>
+                    Otro de los problemas que vamos a encontrar se localiza en los titulos, los cuales tienen un margen extra por defecto, lo cual no permite que en caso de agrearle propiedades como por ejemplo de color, se marque por completo dicho color, dando un resultado diferente al esperado.
+                    La solución que se ha encontrado empiricamente es agregar un pequeño margen en css de quizas .1px para que esto se solucione
+                </p>
+            </div>
+        </main>
+    </body>
+</html>

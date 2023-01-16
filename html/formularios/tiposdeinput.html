@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de input</title>
+</head>
+<body>
+    <header>
+        <h1>Tipos de input</h1>
+    </header>
+    <!-- 
+        input type:
+        & hidden ->Campo oculto, puede contener valor pero no se mostrará
+        | button -> Visualmente es igual, pero el formulario no se enviará
+        ° submit -> Se utiliza para enviar el formulario
+
+        ( number -> Se utiliza para valores númericos
+        = range -> Se utiliza para establecer un rango
+        ° submit -> Se utiliza para enviar el formulario
+        ? reset -> Se utiliza para resetear el formulario
+        ! text -> Valor por defecto
+        
+        * search -> Se utiliza para las barras de búsqueda
+        | tel -> Se utiliza para introducir numeros telefonicos
+        % email -> Se utiliza para introducir un email
+        ) password -> Se utiliza para contraseñas
+        $ url -> Se utiliza para introducir urls
+
+        #  time -> Se utiliza para introducir una hora
+        ! date: -> Se utiliza para introducir una fecha
+        # datetime -> Obsoleto
+        % week -> Se utiliza para introducir el número de semana del año
+        $ datetime-local -> fecha y hora, no funciona en firefox
+        / month -> Se utiliza para introducir un mes
+    -->
+    <main>
+        <section>
+            <h2>Button vs type button</h2>
+            <h3> Ejemplo de input button</h3>
+            <form>
+                <input>
+                <input type="button" value="Enviar">
+            </form>       
+            
+            <!-- |La función de un input button es colocar un boton que va a realizar una acción con JS, no el de enviar el formulario. -->
+       
+            <h3>Ejemplo de submit</h3>
+            <form>
+                <input>
+                <input type="submit" value="Enviar">
+            </form>
+            <!-- ° El Input submit tiene la función de enviar el formulario una vez presionado el botón de value-->
+        </section>
+        <hr>
+        <section>
+            <h2>Input de fecha</h2>
+                <h3>Ejemplo de date</h3>
+                <form>
+                    <input type="date">
+                </form>
+                <h3>Ejemplo de datetime-local</h3>
+                <form>
+                    <input type="datetime-local">
+                </form>
+                <h3>Ejemplo de time</h3>
+                <form>
+                    <input type="time">
+                </form>
+                <h3>Ejemplo de date</h3>
+                <input type="date">
+                <h3>Alternativa a datetime-local</h3>
+                <p>En caso de problemas de accesibilidad</p>
+                <input type="date">
+                <input type="time">
+                <article>
+                    <p>Estas etiquetas no funcionan en Firefox</p>
+                    <h3>Ejemplo de month</h3>
+                    <input type="month">
+                    <h3>Ejemplo de week</h3>
+                    <input type="week">
+                </article>
+        </section>
+        <hr>
+        <section>
+            <!-- *Estos tipos de button en primera instancia funcionan diferente, dependiendo de cual sea sus funcion, si se abren en pc o en movil -->
+
+            <h2> Inputs para moviles </h2>
+            <form>
+                <label >Search
+                    <input type="search">
+                </label>
+            </form>
+            
+            <form>
+                <label> Telephone
+                    <input type="tel">
+                </label>
+            </form>
+
+            <form>
+                <label> e-mail
+                    <input type="email">
+                </label>
+            </form>
+
+            <form>
+                <label > Password
+                    <input type="password">
+                </label>
+            </form>
+
+            <form>
+                <label>URL
+                    <input type="url">
+                </label>
+            </form>
+        </section>
+        <hr>
+        <section>
+            <h2>Input Miscelaneo</h2>
+            <form>
+                <!-- Este input nos permite seleccionar un color con una paleta rgb, util para interaccion del usuario -->
+                Color
+                <input type="color">
+            </form>
+            <form>
+                <!-- Estinput nos permite ingresar unicamente valores numericos, no está diseñado partra fechas -->
+                number
+                <input type="number">
+            </form>
+            <form>
+                <!-- Nos permite ingresar ragos, además de permitir atributos de "step" para marcar de cuanto en cuanto se mueve la barra y atributos de "min" y "max" -->
+                range
+                <input type="range" step="123" min="1.22" max="1230">
+            </form>
+            <form>
+                <!-- Este input nos resetea toda la información de los demás input dentro del mismo form -->
+                reset
+                <input type="reset">
+                <input type="number">
+                <input type="color">
+                <input type="text" >
+            </form>
+            <form>
+                <!-- Este es el nombre del input por defecto -->
+                <input type="text" >
+            </form>
+        </section>
+    </main>
+</body>
+</html>

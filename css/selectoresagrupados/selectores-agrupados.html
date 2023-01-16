@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Selectores Compuestos</title>
+</head>
+<body>
+    <header>
+        <h1>Selectores Compuestos</h1>
+    </header>
+    <main>
+        <section>
+            <h2> Selectores agrupados </h2>
+            <p>
+                Para seleccionar multiples elementos mediantes CSS vamos a usar comas para separar los elementos que van a compartir un mismo estilo. <br>
+                <pre>
+                    <code>
+                    .text1,
+                    .text2,
+                    .text3{
+                        background-color: aquamarine;
+                    }
+                    </code>
+                </pre>
+            </p>
+            <p>
+                Por ejemplo, usando el codigo mostrado anteriormente vamos a darle el mismo estilo a los siguientes parrafos, dandole una clase a cada parrafo para poder diferenciarlos.
+            </p>
+            <p class="text1">"text1" Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aperiam doloribus vitae, architecto deleniti modi quisquam ullam dolore ratione quam impedit nobis illo porro magnam blanditiis distinctio suscipit quos tempora?</p>
+            <p class="text2">"text2 Magnam adipisci fuga quo illum aliquam voluptates doloribus sed, sit mollitia distinctio obcaecati, culpa, quisquam et vel vero veniam. Suscipit a voluptatibus autem cumque rerum voluptatum magni dolores, excepturi sunt?</p>
+            <p class="text3">"text3" Libero nesciunt tempora nam veniam laudantium, modi ducimus cum aperiam sint autem ipsa illo fugiat delectus necessitatibus id mollitia pariatur officiis! Sit, est qui sint consequuntur autem unde laborum facere.</p>
+        </section>
+        <section>
+            <h2>Selectores Combinadores</h2>
+            <div>
+                <h3>Selector descendiente</h3>
+                <p class="descendiente">
+                 Para poder seleccionar un elemento especifico cuyo atributo pudiera ser compartido, vamos a usar el selector descendiente desde CSS para poder tomar esta ruta y aplicarla unicamente al elemento: 
+                 <pre>
+                    <code>
+                        div .descendiente{
+                            background-color: darkviolet;
+                        }
+                    </code>
+                 </pre>
+                </p>
+            </div>
+            <div>
+                <h3 class="h3">Selectores hermanos</h3>
+                <p class="texto">
+                    Este ejemplo es sencillo, a nivel de codigo, segun la jerarquia es como vamos a denominar como hermano o hijo al codiggo. Si encuentran al mismo nivel, son hermanos, si se encuentran por debajo o dentro, son hijos.
+                </p>
+                <p class="texto2">
+                    Para seleccionar hermanos en CSS vamos a seleccionar el primero y usaremos el signo "+" para decirle a nuestro navegador que debe seleccionar al hermano que está inmediatamente después del primero
+                </p>
+                <p>
+                    Ahora que si queremos seleccionar el total de hermanos siguientes, vamos a usar el simbolo "~"
+
+                </p>
+                <p>
+                    Tempor´ibus esse doloremque iure aliquam architecto voluptatum ipsam, consectetur explicabo dolorum eaque sit amet, nesciunt aperiam odit sunt velit pariatur enim dignissimos autem impedit unde doloribus nulla non fuga. Nostrum?
+                </p>
+                <p>
+                    Sed aut blanditiis molestias quod harum hic natus error voluptates vitae, perspiciatis unde iure impedit velit excepturi tempora recusandae alias distinctio possimus nemo iusto pariatur, soluta magnam! Dicta, hic culpa.
+                </p>
+            </div>
+            <div class="container">
+                <h3>Selector hijodirecto</h3>
+                <div>
+                    <p>
+                        Con este selector, vamos a poder darle estilo a los "hijos directos" de un div, los cuales serán los que están unicamente dentro de este msismo, en el caso de que el elemento estuivera dentro de otro div, ya no sería hijo, sino nieto y la regla ya no aplica.
+                        Para que esto funcione, debemos decirle al navegador que queremos solamente usar a los hijos de la etiqueta, esto se hace usando un ">" y después indicando que elemento de la contenedor queremos usar.
+                        <pre>
+                            <code>
+                                .container > p{
+                                    background-color:
+                                }
+                            </code>
+                        </pre>
+
+                    </p>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, nesciunt qui. Soluta amet quidem laboriosam voluptates exercitationem voluptatem quod adipisci sapiente animi et libero sed suscipit, alias necessitatibus! Accusamus, quos.</p>
+                <div>
+                    <p>Voluptate numquam ab blanditiis maiores iusto. Culpa accusantium perspiciatis perferendis. Id perspiciatis quia corrupti nemo harum sequi numquam sunt labore, non molestias, veniam perferendis obcaecati. Saepe blanditiis dolor fugit? Incidunt.</p>
+
+                </div>
+                <p>Suscipit dolore quas perspiciatis sed cumque veritatis quis aperiam incidunt ea ipsum quibusdam dolores debitis dolorem facilis quo aliquam voluptatibus voluptate libero rem nisi perferendis, enim a non animi. Explicabo!</p>
+                <p>Cupiditate hic quidem corrupti ad enim cumque labore eius incidunt adipisci laboriosam rerum inventore, aliquam architecto ex expedita dolore quaerat tempora! Officiis vero provident voluptates odit ipsum nam neque animi.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

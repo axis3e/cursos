@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Selectores</title>
+</head>
+<body>
+    <header>
+        <h1>Selectores Simples</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Selectores básicos</h2>
+            <p>Exsiten dos tipos de selectores</p>
+            <ul>
+                <li>Selectores Simples
+                    <ol>
+                        <li>Selectores Elementales <br>
+                            Aquí vamos a encontrar el selector universal (*) y el selector de tipo o etiqueta (nombre de la etiqueta)
+                            <!-- 
+                            Slector universal -> *
+                            Selector de tipo o etiqueta -> Nombre de la etiqueta
+                         -->
+                        </li>
+                        <li id="select">Selectores de atributo
+                        id -> id del elemento: <br>
+                         Vamos a reconocer un id mediante el atributo id dentro de una etiqueta, a su vez, en CSS lo vmos a seleccionar con un # para identificarlo, siempre usando de manera correcta el identificador, respetando las mayusculas y toda la gramatica del id, aunque no es recomendable usarlo ya que no es lo más adecuado a la hora de usar el codigo <br>
+                        </li>
+                        <li class="clase">
+                         clase -> clase del elemento <br>
+                         Para poder agregar estilo mediante las clases vamos a agregarle esta al elemento que necesitemos modificar, mediante el atributo class dentro de la etiqueta <br>
+                         En CSS vamos a usar .class(nombre de la clase) para poder modificar el elemento <br>
+                        </li>
+                        <li>
+                         Otros atributos:
+                         Para otros atributos vamos a usar las llaves cuadradas "[]" viendose así:
+                         <pre>
+                            <code>
+                                [atributo]
+                                [atributo=valor]
+                                [atributo^=valor]
+                                [atributo*=valor]
+                                [atributo$=valor]
+                            </code>
+                         </pre>
+                         <p>
+                             En el primero sencillamete vamos a ingresar nuestro atributo "global", para que todos los elementos con este atributo sean modificados al mismo tiempo. 
+                         </p>
+                         <a href="https://www.youtube.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=82s">Dorian Desings</a>
+                         <a href="https://www.youtube.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=82s">Dorian 2</a> 
+                         <p>
+                             El segundo ejemplo nos sirve para identificar un elemento en particular y así agregarle la modificación unicamente al mismo. 
+                         </p>
+                         <a href="ahttps://www.youtube.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=82sdd">Dorian 4</a> 
+                         <p>
+                            El tercero por su parte nos sirve para agregar estilo a todos los atributos que compartan la misma palabra al inicio
+                         </p>
+                         <a href="httpsa://www.youtube.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=82s">Dorian 3</a>
+                         <a href="httpsa://www.youtube.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=82s">Dorian 6</a>
+                         <a href="httpsa://www.youtube.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=82s">Dorian 7</a>
+                         <p>
+                            El cuarto nos srive para que todos los elementos que tengan una palabra en comun, independientemente de su posición, reciban el mismo estilo
+                         </p>
+                         <a href="httpsa://www.youtuber.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=82s">Dorian 8</a>
+                         <a href="httpsa://www.youtuber.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=">Dorian 9</a>
+                         <a href="httpsa://www.youtuber.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=">Dorian 10</a>
+                         <a href="httpsa://www.youtuber.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=">Dorian11</a>
+                         <p>
+                             Y el ultimo nos ayuda a que todos los elementos que tengan al final la misma palabra reciban el estilo
+                         </p>
+                         <a href="https://www.youtube.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=82sguagua">Dorian 5</a>
+                         <a href="httpsa://www.youtuber.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=82sguagua">Dorian12</a>
+                         <p lang="en">
+                            Como ejemplo final tenemos la opcion de seleccionar un elemento por su idioma y así cmabiar su configuración
+                         </p>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

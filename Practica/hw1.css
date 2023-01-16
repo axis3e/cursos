@@ -1,0 +1,58 @@
+body{
+    margin: 10px auto;
+    padding: 10px auto;
+    float: right;
+}
+header{
+    background-image:url("images/flywheel.jpg"); 
+    background-size: cover;;
+    background-color: hsl(0, 0%, 50%), rgb(255 255 255);
+    overflow: hidden;
+}
+nav{
+    text-align: center;
+}
+h1{
+    text-transform:uppercase;
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+	position: relative;
+	bottom: 10px;
+    
+}
+h2{
+    color: #0000ff;
+    text-transform:uppercase;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 12px;
+}
+section{
+    background-color: rgb(54, 54, 54);
+}
+a{
+    color: black;
+    background-color: rgb(107, 107, 107);
+}
+.active{
+    background-color: rgb(255 255 25);
+}
+.left img {
+	display: block;
+	width:25%;
+	height: 50%;
+	border: 10px double 10px;
+	margin-left: 25%;
+	
+}
+th{
+    background: #808000; 
+    color: #FFFFFF; 
+    border: 2px solid #FFFFFF; 
+    background-image: url('http://www.photos-public-domain.com/wp-content/uploads/2011/03/olive-green-parchment-paper-texture.jpg');
+    background-repeat: no-repeat;
+
+}
+table, td, th {	    
+    padding: 1rem;
+}

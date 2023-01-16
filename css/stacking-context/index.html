@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Stacking Context</title>
+    </head>
+    <body>
+        <header>
+            <h1>Stacking Context</h1>
+        </header>
+        <main>
+            <section class="other">
+                <p>
+                    El stacking context o el contexto de apilamiento es el espacio donde nuestros elementos se van a ir apilando para que unos queden por detrás y otros por delante.
+                </p>
+                <p>
+                    El orden del stacking context es: (de delante a atrás):
+                </p>
+                <ol>
+                    <li>
+                        Elementos posicionados con un z-index de 1 ó más
+                    </li>  
+                    <li>
+                        Elementos posicionados sin z-index declarado (o z-index:auto)
+                        
+                    </li>  
+                    <li>
+                        Elementos no posicionados
+                    </li>  
+                    <li>
+                        Elementos con z-index negativo
+                    </li>  
+            </section>
+            <section class="context">
+                <div class="box box-1">
+                    Box1 (z-index 9)
+                </div>
+                <div class="container">
+                    <h1 class="title">Apilamiento (z-index 10)</h1>
+                    <p class="text">No declarado <br>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat facilis qui labore iusto accusantium perferendis nihil ipsam? Facilis soluta at tempora dolorem suscipit delectus quas dignissimos, sed vero placeat perspiciatis.
+                    </p>
+                </div>
+                <div class="box box-2">
+                    Box 2 (sin z-index)
+                </div>
+                <div class="box box-3">
+                    Box 3 (z-index negativo)
+                </div>
+            </section>
+            </ol>
+        </main>
+    </body>
+</html>

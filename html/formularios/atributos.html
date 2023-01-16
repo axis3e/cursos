@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Atributos de formularios</title>
+</head>
+<body>
+    <header>
+        <h1>Atributos de formularios</h1>
+    </header>
+    <!-- 
+        | placeholder -> Da una pista de lo que el usuario tiene que introducir
+        ° required -> Hace que un campo sea obligatorio
+        ! readonly -> Hace que un campo sea de solo lectura
+        # disabled -> Desactiva el campo, no se podrá escribir en el
+
+        $ min - max -> Establece el mínimo y máximo de un campo numérico
+        % minlenght - maxlenght -> Establece el minimo y máximo de caracteres de un campo de texto
+        
+        & selected -> Equivale a checked en los select, sirve para establecer una opción por defecto
+        / autofocus -> Para poner el foco por defecto al cargar el formulario
+    -->
+    <main>
+        <section>
+            <!-- !Con este atributo, vamos a tener una descripción dentro del formulario de lo que debemos introducir -->
+            <h2>Ejemplo de placeholder</h2>
+            <form>
+                <input type="text" placeholder="Canción favorita">
+                <input type="submit">
+            </form>
+        </section>
+        <section>
+            <h2>Ejemplo de required</h2>
+            <!-- ° required le indica al sistema que el campo a rellenar es obligatorio -->
+            <form>
+                <input type="text" placeholder="Fecha de nacimiento" required>
+                <input type="submit">
+            </form>
+        </section>
+        <section>
+            <h2>Ejemplo de readonly</h2>
+            <!-- 
+                Simple y sencillamente, hace que nuestro formulario sea unicamente de lectura
+             -->
+             <form>
+                
+                <input type="text" value="Esto es un value" readonly>
+                
+             </form>
+        </section>
+        <section>
+            <h2>Ejemplo de disabled</h2>
+            <!-- 
+            Basicamente desactiva el campo, no permite generarn ningun tipo de accion
+             -->
+             <form>
+                <input type="text" value="Quiero llorar, siquesi" disabled>
+                <input type="submit" disabled>
+             </form>
+        </section>
+        <section>
+            <!-- 
+                Con estos atributos vamos a manejar el minimo y el maximo en un campo numerico, cada uno es opcional, y no van necesariamente de la mano
+             -->
+            <h2>Ejemplo de atributos min y max</h2>
+            <form>
+                <input type="number" min="5000000000" max="5000000002">
+                <input type="submit">
+            </form>
+        </section>
+        <section>
+            <h2>Ejemplo de minlenght y maxlenght</h2>
+            <!-- 
+                Es igual al atributo min y max, solo que es para caracteres, o sea texto. Para que funcione tal cual, debe tener agregado un atributo required
+            -->
+            <form>
+                <input type="text" minlength="10" maxlength="300" required>
+                <input type="submit">
+            </form>
+        </section>
+        <section>
+            <h2>Ejemplo de selected y autofocus</h2>
+            <!-- 
+                Funciona de la misma manera que funciona un checked en el input radio y checkbox, es un atributo para option anidado en select
+
+                El autofocus sirve para tener por defecto seleccionado el input a rellenar
+             -->
+            <form>
+                <select name="numer">
+                    <option value="Babuni" selected>Babuni</option>
+                    <option value="ozuna">Ozuna</option>
+
+                    <select name="numer">
+                        <option value="Babuni" selected></option>
+                        <option value="ozuna"></option>
+                <input type="text" minlength="10" maxlength="300" autofocus placeholder="este es un autofocus">
+                <input type="submit">
+                
+                <input type="text" minlength="10" maxlength="300" required>
+                <input type="submit">
+            </form>
+
+        </section>
+
+    </main>
+    
+</body>
+</html>

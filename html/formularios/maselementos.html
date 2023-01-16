@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Más elementos</title>
+</head>
+<body>
+    <header>
+        <h1>Más elementos</h1>
+    </header>
+    <!-- 
+        / fieldset -> Se utiliza para agrupar elementos dentro de un formulario
+        ( legend -> Representa una etiqueta para el contenido del fieldset
+        ) file -> Este input se utiliza para cargar archivos y enviarlos desde un formulario
+        % meter -> Representa un valor dentro de un rango conocido
+        & progress -> Representa el progreso de una tarea
+        ° textarea -> Se utiliza para introducir texto en un formulario
+    -->
+    <main>
+        <section>
+            <h2> Ejemplo de fieldset </h2>
+            <form> 
+                <!-- 
+                    | Debemos recordar en todo momento, que al iniciar un formulario, la etiqueta es <form>
+                    ° La etiqueta <fieldset> lo que va a hacer es agrupar esteticamente en un recuadro el conjunto de datos anidados dentro de ella
+                    ! La etiqueta <legend> nos va a ayudar a identificar de manera más sencilla el tipo de información que debemos ingresar
+                -->
+                <fieldset>
+                    <legend>Datos</legend>
+                    <label for="name">nombre</label>
+                    <input type="text" id="name">
+                    <label for="lastname">Apellido</label>
+                    <input type="text" id="lastname">
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <h2>Ejemplo de Input File</h2>
+            <form>
+                <!-- # Con este input podemos cargar documentos directamente desde nuestro ordenador, tiene más vista al usar CSS y más funcionalidad al usar JSS-->
+                Subamos un perreo bien puerco
+                <input type="file">
+            </form>
+        </section>
+        <section>
+            <form>
+                <h2>Ejemplo de meter</h2>
+                <!-- La etiqueta <meter> nos va a proporcionar una amnera de representar una barra de porcentaje, esta etiqueta tiene a su vez diferentes atributos:
+                    min 
+                    max
+                    low
+                    high 
+                    optimum  
+                Ademas de los atributos por defecto, "id" "value"                    
+                -->
+                <label for="awa"> Garrafones</label>
+                <meter id="awa" value="78" min="0" max="100" low="10" high="60" optimum="80"></meter>
+            </form>
+        </section>
+        <section>
+            <!-- Esta etiqueta nos ayuda a representar el avance de una tarea -->
+            <h2>Ejemplo de progress</h2>
+            <form>
+                <label for="tarea">Ensayo sobre Benito Ocasio Martinez</label>
+                <progress id="tarea" max="100" value="99"> </progress>
+            </form>
+        </section>
+        <section>
+            <h2>Ejemplo de textarea</h2>
+            <!-- !Esta es la etiqueta para formulario que vamos a usar más comunmente, pues nos permite abrir una ventana para ingresar texto, ya sea para mensajes, comentarios, etc. -->
+            <form>
+                <label for="texto">Razones para que Bad Bunny sea presidente</label>
+                <textarea name="datos" id="texto" cols="30" rows="10"></textarea>
+            </form>
+        </section>
+
+    </main>
+</body>
+</html>

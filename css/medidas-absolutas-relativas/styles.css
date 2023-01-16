@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid blue;
+}
+.re{
+    border: 1px solid white;
+}
+
+.box{
+    width: auto;
+    height: 150px;
+    margin-left: 10px;
+    background-color: white;
+}
+.bch{
+    margin-left: 10px;
+    width: auto;
+    height: 50%;
+    background-color: rgb(255, 0, 0);
+}
+.text2{
+    position: absolute;
+    right: 20px;
+    width: 250px;
+    height: auto;
+    background-color: white;
+    color: black;
+}
+.text{
+    position: absolute;
+    right: 250px;
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+    margin-right: 2em;
+    background-color: white;
+    color: black;
+}
+.important{
+    padding: 10px;
+    font-size: 2em;
+    color: red;
+    background-color: rgb(0, 255, 179);
+
+}
+.he{
+    width: 300px;
+    height: 200px;
+    background-color: lime;
+}
+.hch{
+    position: absolute;
+    width: auto;
+    background-color: rgb(250, 0, 0);
+    border: 1px solid white;
+    z-index: 10;
+}
+
+.header1{
+    margin-top: .1px;
+    background-color: red;
+    width: 100%;
+    height: 5vh;
+    border: 1px solid white;
+}
+.vp{
+    position: relative;
+    margin-left: 5vw;
+    margin-bottom: 10vh;
+    width: 30vw;
+    height: 30vh;
+    border: 1px solid red;
+    background-color: lime;
+}
+.boxv1{
+    top: 40vh;
+}
+.boxv2{
+    left: 35vw;
+    bottom: 35vh;
+}
+.boxv3{
+    position: relative;
+    top: 5vh;
+    width: 100%;
+    margin-bottom: 10vh;
+    border: 1px solid lime;
+    background-color: brown;
+
+}
+/*
+Orden
+Position - Propiedades de posicionamiento
+Box Model - Propiedades del box model
+Text - Propiedades de texto
+Visual - Propiedades visuales (colores, bordes, background...)
+Varios - El resto
+    
+*/
+.size{
+    position: relative;
+    height: 30vw;
+    margin-bottom: 5vw;
+    text-align: center;
+    background-color: aqua;
+    color: black;
+}
+.bots1{
+    width: 100%;    
+    min-width: 700px;
+    max-height: 200px;
+}
+.bots2{
+    width: 30vw;
+    left: 25vw;
+    max-width: 300px;
+    min-height: 300px;
+}
+
+

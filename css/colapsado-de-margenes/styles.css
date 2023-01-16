@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: brown;
+    margin: 0;
+}
+h1{
+    background-color: aqua;
+    margin-top: .1px;
+}
+
+.box-1,
+.box-2{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
+    overflow: auto;
+    padding: .5em;
+}

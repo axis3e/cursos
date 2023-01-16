@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Fundamentos CSS</title>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="title" class="title">Especificidad</h1>
+        </header>
+        <main>
+            <section>
+                <h2>¿CÓMO FUNCIONA CSS?</h2>
+                <p>
+                    Especificidad -> Establece cómo de específico es un selector para saber qué estilo aplicar. <br>
+                    El cálculo se realiza con la siguiente fórmula:
+                </p>
+                    <ul>
+                        <li>Etiquetas y pseudoelementos 001</li>
+                        <li>Clases, atributos y pseudoclases 010</li>
+                        <li>Ids 100</li>
+                        <li>Estilos en linea 1000</li>
+                        <li>!important GANA A TODO Y NO SE USA NUNCA</li>
+                    </ul>                     
+                <p>
+                    Para poner un ejemplo acerca de la especificidad vamos a usar el titulo de ejemplo, puesto que le hemos agregado tanto la clase como el id "title", y en base a ello, vamos a trabajar la especificidad a traves de CSS:
+                </p>
+                    <pre>
+                        <code>
+                            h1{
+                                background-color: red;
+                            }
+                            /* specificity 0,0,1 */
+    
+                            .title{
+                                background-color: green;
+                            }
+                            /* specificity 0,1,0 */
+    
+                            #title{
+                                background-color: blue;
+                            }
+                            /* specificity 1,0,0 */
+    
+                            h1.title{
+                                background-color: black;
+                            }
+                            /* specificity 0,1,1 */
+                                                    
+                            h1#title{
+                                background-color: cornsilk;
+                            }
+                            /* specificity 1,0,1 */
+                            
+                            .title#title{
+                                background-color: darkblue;
+                            }
+                            /* specificity 1,1,0 */
+                            
+                            h1.title#title{
+                                background-color: blueviolet;
+                            }
+                            /* specificity 1,1,1 */
+    
+                        </code>
+                    </pre>
+                <p>
+                    Podemos darnos cuenta mediante la especificidad que el estilo que tenga un valor más alto será el que se termine aplicando
+                </p>
+            </section>
+            <section>
+                <h2>Cascada</h2>
+            
+                <p>
+                    Cascada -> Funciona siempre que la especificidad sobre el elemento sea la misma <br>
+                    De la misma manera debemos aclarar que en caso de que las etiquetas llegasen a tener la misma especificidad van a ser cambiadas por la cascada, es decir, la que este más abajo va a sobreescribir a la que tenga encima.
+                </p>
+            </section>
+            <section>
+                <h2>Herencia</h2>
+                <p>
+                    Herencia -> Es la capacidad que tienen algunos elementos de heredar algunas propiedades de sus elementos contenedores (padres, abuelos, etc) 
+                </p>
+                <p>
+                    En la mayoria de los casos, vamos a encontranos con caracteristicas heredadas, por ejemplo, al agregar un &#60;span&#62; dentro de un &#60;p&#62;, al agregarle un estilo a &#60;p&#62; el span va a heredar la caracteristica, ya sea tamaño, color, fuente, etc. <br>
+
+                </p>
+                <p>
+                    En el caso de que un elemento no heredase esta caracteristica y necesitasemos qeu así fuera tenemos el valor "inherit" para que así se logre:
+                </p>
+                <div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. <a class="link" href="x">no cambia por Herencia</a> Alias enim possimus, nostrum quam saepe hic obcaecati nobis pariatur laudantium? Mollitia corporis enim cumque ducimus nesciunt expedita reprehenderit dolores minus fuga.</p>
+    
+                    <p class="text">Nam dignissimos veritatis blanditiis repellendus, officiis impedit voluptates velit id! Dicta ipsam similique, <a class="link2" href="x">Sí cambia por herencia (.link2)</a> est corrupti tenetur repellendus dolorem asperiores suscipit nisi dolore minima velit molestiae, ipsum praesentium explicabo quae natus!</p>
+                    
+                </div>
+                <p>El codigo nos queda así</p>
+                <pre>
+                    <code>
+                        .text{
+                            color: darkgreen;
+                        }
+                        
+                        .link{
+                            color: cyan;
+                        }
+                         
+                        .link2{
+                            color: inherit;
+                            background-color: bisque;
+                        }
+                    </code>
+                </pre>
+                <p>
+                    Y para lograr el caso contrario, es decir, que un elementono herede la caracteristica de su padre, vamos a usar el valor "initial":
+                    <ul>
+                        <li class="list">Element1</li>
+                        <li class="list">Element2</li>
+                        <li class="list">Element3</li>
+                        <li class="list2">Nohereda (.list2)</li>
+                        <li class="list">Element4</li>
+                    </ul>
+                    Y el código queda así:
+                </p>
+                <pre>
+                    <code>
+                        ul{
+                            background-color: aqua;
+                            color: crimson;
+                        }
+                        .list2{
+                            color: initial;
+                        }
+                    </code>
+                </pre>
+            </section>
+        
+        </main>
+    </body>
+</html>

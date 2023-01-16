@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    text-align: center;
+    background-color: #333;
+}
+.cards{
+    width: 90%;
+    height: 500px;
+    margin: 200px auto;
+    font-size: 0;
+    color: rgb(255 255 255 / .75);
+}
+.card{
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 100%;
+    padding-top: 3em;
+    padding-left: 2em;
+    text-align: left;
+    font-size: 1rem;
+}
+.card-title{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.card-text{
+    width: 200px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.sedans{
+    background-color: hsl(31, 77%, 52%);
+}
+.suvs{
+    background-color:hsl(184, 100%, 22%);
+}
+.luxury{
+    background-color: hsl(179, 100%, 13%);
+}
+
+.card-cta{
+    position: absolute;
+    bottom: 3rem;
+    /*display: block; 
+    text-align: center;*/
+    padding: .7em 2em;
+    border-radius: 1.2em;
+    text-decoration:none ;
+    background-color: rgb(255 255 255);
+}
+.link-color1{
+    color: hsl(31, 77%, 52%);
+}
+.link-color2{
+    color: hsl(184, 100%, 22%);
+}
+.link-color3{
+    color: hsl(179, 100%, 13%);
+}

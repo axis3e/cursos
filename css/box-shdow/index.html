@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Box Shadow</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Box Shadow</h1>
+        </header>
+        <main>
+            <div class="box">
+                <p>
+                    La propiedad box-shadow se creó para añadir efectos de sombra a nuestra caja.
+                </p>
+                <p>
+                    En esencia lo que hace es crear un clon de la caja respetando la forma de su box-model (ancho, alto, redondez) 
+                </p>
+                <p>
+                    La sintaxis de box-shadow se puede escribir de distintas formas según lo que queramos conseguir.
+                </p>
+                <p>
+                    Los valores que le podemos poner son:
+                </p>
+                <ul>
+                    <li>offset-x -> Desplazamiento en x (obligatorio)</li>
+                    <li>offset-y -> Desplazamiento en y (obligatorio)</li>
+                    <li>blur-radius -> Desenfoque de la sombra</li>
+                    <li>spread-radius -> Expansión de la sombra</li>
+                    <li>color -> El color de la sombra, si no lo especificamos lo heredará del elemento al que pertenece</li>
+                    <li>color -> El color de la sombra, si no lo especificamos lo heredará del elemento al que pertenece</li>
+                </ul>
+                <pre>
+                    <code>
+                        .title{
+                            box-shadow: -15px -10px 10px rgb(3, 40 250), 
+                            -20px -10px 10px red, -5px -5px inset rgb (255, 15, 215),
+                            5px 5px inset yellow;
+                        }
+                        .box{
+                            background-color: rgb (28, 0, 54);
+                            width: 700px;
+                            height: 400px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            padding: 10px;
+                            overflow: auto;
+                            box-shadow: 15px 10px 10px rgb (3, 40, 250),
+                            20px 10px 10px red, 5px 5px rgb (255, 15, 215) inset,
+                            -5px -5px yellow inset;
+                        }
+                    </code>
+                </pre>
+            </div>
+        </main>
+    </body>
+</html>

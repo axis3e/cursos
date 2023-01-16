@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+
+.box{
+    background-color: bisque;
+    width: 400px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 100px;
+    padding: 15px 45px;
+    overflow: auto;
+}

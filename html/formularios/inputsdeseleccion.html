@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            color: rgb(255, 255, 255);
+            background-color: rgb(24, 24, 24);
+        }
+        h1{
+            color: rgb(0, 223, 30);
+        }
+        h2{
+            color: purple;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Inputs de seleccion</title>
+</head>
+<body>
+    <header>
+        <h1>Inputs de selección</h1>
+    </header>
+    <!-- Vamos a estudiar los tipos de input que nos permiten seleccionar elementos en especifico
+
+        | radio -> Nos permite seleccionar una unica opcion de una lista de opciones relacionadas
+        ° checkbox-> Permite seleccionar varias opciones de una lista de opciones relacionadas
+        
+    -->
+    <main>
+        <section>
+
+            <h2>Ejemplo de input radio</h2>
+            <form>
+                <!-- Este input nos va a permitir escoger una de las opciones que nos presenta el formulario, la funcion particular del mismo es que nos va a dar la oportunidad de solamente escoger una de ellas. 
+                Vamos a tener que usar (como en todos los input) los atributos "name" y "value"
+                En caso de que queramos tener una de estas opciones por defecto, vamos a poder usar el atributo "checked"-->
+                <label>Bichiyal
+                    <input type="radio" name="vibra" value="yhlqmdlg">
+                </label>
+                <label>Callaita
+                    <input type="radio" name="vibra" value="uvst" checked>
+                </label>
+                <label>Motomami
+                    <input type="radio" name="vibra" value="motomami">
+                </label>
+            </form>
+        </section>
+        <section>
+            <h2>Ejemplo de checkbox</h2>
+            <form>
+                <!-- son en escencia lo mismo que los input de tipo radio solo que con este input, podemos seleccionar multiples opciones -->
+                <h3>Albumes de Bad Bunny que rifan</h3>
+                <label>
+                    YHLQMDLG
+                    <input type="checkbox" name="album" value="yohago">
+                </label>
+                <label>
+                    Un Verano Sin ti
+                    <input type="checkbox" name="album" value="verano">
+                </label>
+                <label>
+                    El ultimo tour del Mundo
+                    <input type="checkbox" name="album" value="tour">
+                </label>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

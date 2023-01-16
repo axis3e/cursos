@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+  </head>
+  <body>
+    <!-- 
+        Las listas en HTML sirven para listar contenido. En función del tipo de contenido de nuestra lista tenemos tres tipos de listas:
+        )ul -> unordered list: Se utilizan cuando el orden de los elementos no influye (lista de la compra) 
+        (ol -> ordered list: Se utilizan cuando el orden de los elementos es importante (top 10)
+        =dl ->definition list: Se utilizan para hacer una lista de definiciones (diccionario)
+    
+        Cada elemento de la lista se representa con la etiqueta <li>, tanto en las ul como en las ol
+            
+        $Se pueden construir listas anidadas teniendo en uno de los li otro ul/ol según sea necesario
+            
+        $<ol>
+            $<li>
+                $HTML
+                $<ul>
+                    $<li>Estructura</li>
+                    $<li>Sintaxis</li>
+                    $<li>Etiquetas</li>
+                $</ul>
+            $</li>
+            $<li>CSS</li>
+            $<li>JavaScript</li>
+        $</ol>
+    -->
+    <header>
+      <h1>Introduccion a las listas</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Listas html</h2>
+        <article>
+            <h3>Prueba menú de navegación</h3>
+            <!-- ?Para crear menús de navegacion, debemos alojar la lista <ul> en un <nav> -->
+            <nav>
+                <ul>
+                    <li><a href="/codigo/practicas/Dorian/web-prueba/blog.html#post1">Post 1</a></li>
+                    <li><a href="/codigo/practicas/Dorian/web-prueba/blog.html#post2">Post 2</a></li>
+                    <li><a href="/codigo/practicas/Dorian/web-prueba/blog.html#post3">Post 3</a></li>
+                </ul>
+            </nav>
+  
+        </article>
+        <article>
+          <h3>Ingredientes para atole (Prueba listas ul)</h3>
+          <ul>
+            <!-- *Aqui tenemos un inicio de lista desordenada-->
+            <li>Masa</li>
+            <!--°Los elementos de una lista se definen con la etiqueta <li> la cual significa List Item-->
+            <li>Harina</li>
+            <li>Azucar</li>
+            <li>Chocolate</li>
+            <li>Leche</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Mejores sabores de atole (prueba listas ol)</h3>
+          <!--#Aquí tenemos el inicio de una lista ordenada-->
+          <ol>
+            <li>Chocolate</li>
+            <li>Vainilla</li>
+            <li>Coco</li>
+            <li>Avena</li>
+            <li>Fresa</li>
+          </ol>
+        </article>
+        <article>
+          <h3>Lenguajes de programación (prueba listas dl)</h3>
+          <!--!Para este tipo de listas vamos a usar etiquetas diferentes a las que usamos en las otras, aquí se usan dt (Definition Term) y dd (Definicion Description)-->
+          <dl>
+            <dt>HTML</dt>
+            <dd>Significa HiperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascade Style Sheets</dd>
+            <dt>JavaScript</dt>
+            <dd>Lenguaje de programación para interactividad en sitios web</dd>
+          </dl>
+        </article>
+        <article>
+          <h3>Listas anidadas dentro de listas</h3>
+          <!-- Aqui vamos a crear una lista ul anidada dentro de una lista ol -->
+          <ul>
+            <li>
+              html
+              <ol>
+                <li>Lista 1</li>
+                <li>Lista 2</li>
+              </ol>
+            </li>
+            <li>
+              CSS
+              <ol>
+                <li>Lista a</li>
+                <li>lista b</li>
+              </ol>
+            </li>
+            <li>
+              JavaScript
+              <ol>
+                <li>Lista a)</li>
+                <li>Lista b)</li>
+              </ol>
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3>Atributos de las listas</h3>
+          <!--
+            °ul->
+            °type: Estilo de los items (disc, square, circle)
+
+            °Como nota aparte, al parecer el atributo "type" es obsoleto, y lo adecuado es usar CSS 
+          -->
+            <ul type="circle">
+            <li>Itm1</li>
+            <li>Itm2</li>
+            <li>Itm3</li>
+          </ul>
+          <ul type="disc">
+            <li>Itm1</li>
+            <li>Itm2</li>
+            <li>Itm3</li>
+          </ul>
+          <ul type="square">
+            <li>Itm1</li>
+            <li>Itm2</li>
+            <li>Itm3</li>
+          </ul>
+          <!-- 
+            (ol->
+            (type: Estilo de numeración (1, A, a, I, i)
+            (start: Inicio de las scuencias (Un número) 
+          -->
+          
+          <ol type="1" start="4">
+            <li>Itm1</li>
+            <li>Itm2</li>
+            <li>Itm3</li>
+          </ol>
+          <ol type="a" start="3">
+            <li>Itm1</li>
+            <li>Itm2</li>
+            <li>Itm3</li>
+          </ol>
+          <ol type="A" start="8">
+            <li>Itm1</li>
+            <li>Itm2</li>
+            <li>Itm3</li>
+          </ol>
+          <ol type="I" start="7">
+            <li>Itm1</li>
+            <li>Itm2</li>
+            <li>Itm3</li>
+          </ol>
+          <ol type="i" start="2">
+            <li>Itm1</li>
+            <li>Itm2</li>
+            <li>Itm3</li>
+          </ol>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

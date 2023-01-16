@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles2.css">
+        <title>Borders</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Borders</h1>
+        </header>
+        <main>
+            <section id="sec">
+                <header>
+                    <h2>Border Radius</h2>
+                </header>
+                <p>
+                    Border-radius: Es la propiedad que nos permite redondear vértices de forma independiente.
+                </p>
+                <p>
+                    Es un shorthand que engloba 4 propiedades:
+                </p>
+                <ul>
+                    <li>border-top-left-radius -> Radio del borde superior izquierdo</li>
+                    <li>border-top-right-radius -> Radio del borde superior derecho</li>
+                    <li>border-bottom-right-radius -> Radio del borde inferior derecho</li>
+                    <li>border-bottom-left-radius -> Radio del borde inferior izquierdo</li>
+                </ul>
+                <p>
+                    Si sólo recibe un valor dibujará un círculo en el vértice que especifiquemos:
+                </p>
+                <ul>
+                    <li>
+                        border-top-right-radius: 50px; -> Círculo con 50px de radio
+                    </li>
+                </ul>
+                <p>
+                    Si recibe dos valores dibujará una elipse en el vértice que especifiquemos:
+                </p>
+                <ul>
+                    <li>
+                        border-top-right-radius: 50px 100px; -> Elipse con 50px en el radio X y 100px en el radio Y
+                    </li>
+                </ul>
+                <p>
+                    Si utilizamos el border-radius como shorthand hay diferencias entre si queremos dar un valor a cada lado (círculo) o dos (elipse)
+                </p>
+                <article>
+                    <header>
+                        <h3>Con un solo valor:</h3>
+                    </header>
+                    <ul>
+                        <li>border-radius: 50px; -> Círculo de 50px a cada vértice</li>
+                        <li>border-radius: 50px 100px; -> Círculo de 50px en el vértice superior izquierdo y en el inferior derecho y de 100px en el superior derecho y el inferior izquierdo</li>
+                        <li>border-radius: 50px 100px 200px; -> Círculo de 50px en el vértice superior izquierdo, de 100px en el superior derecho y el inferior izquierdo y de 200px en el inferior derecho.</li>
+                        <li>border-radius: 50px 100px 200px 300px; -> Círculo de 50px en el vértice superior izquierdo, de 100px en el superior derecho, de 200px en el inferior derecho y de 300px en el inferior izquierdo.</li>
+                    </ul>
+                    <div>
+                        <pre class="pre">
+                            <code>
+                                box{
+                                    width: 500px;
+                                    height: 500px;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                    background-color: gray;
+                                    /* border-radius: 100px; */
+                                    border-top-left-radius: 50px;
+                                    border-top-right-radius: 100px;
+                                    border-bottom-left-radius: 150px;
+                                    border-bottom-right-radius: 200px;
+                                    border-radius: 50px 100px 150px 200px;
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="box"></div>
+
+                </article>
+                <article class="elipse">
+                    <header>
+                        <h3>Con dos valores:</h3>
+                    </header>
+                    <p>
+                        Al tener dos radios debemos agrupar los radios y separarlos por una barra.
+                    </p>
+                    <div class="elipse1">
+                        border-radius: 25px / 50px; -> Elipse de 25px en Y y 50px en X a cada vértice.
+                    </div>
+                    <div class="elipse2">
+                        border-radius: 25px 50px / 50px 100px; -> Elipse de 25px en Y y 50px en X a los vértices superior izquierdo e inferior derecho y una elipse de 50px en Y y 100px en X en los vértices superior derecho e inferior izquierdo.
+                    </div>
+                    <div class="elipse3">
+                        border-radius: 25px 50px 75px / 50px 100px 150px; -> Elipse de 25px en Y y 50px en X al vértice superior izquierdo, una elipse de 50px en Y y 100px en X en los vértices superior derecho e inferior izquierdo y una elipse de 75px en Y y de 150px en X al vértice inferior derecho.
+                    </div>
+                    <div class="elipse4">
+                        border-radius: 25px 50px 75px 100px / 50px 100px 150px 200px; -> Elipse de 25px en Y y 50px en X al vértice superior izquierdo, una elipse de 50px en Y y 100px en X en el vértice superior derecho, una elipse de 75px en Y y de 150px en X al vértice inferior derecho y una elipse de 100px en X y 200px en Y en el vértice inferior izquierdo.
+                    </div>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

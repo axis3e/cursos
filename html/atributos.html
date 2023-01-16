@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .prueba1{
+            color: blue;
+        }
+        #prueba2{
+            color: red;
+        }
+    </style>
+    <title>Atributos</title>
+</head>
+<body>
+    <!--
+        Los atributos son valores adicionales que configuran los elementos y/o ajustan su comportamiento.
+        En terminos generales hay dos tipos de atributos:
+        Comunes, los cuales su sintaxis es ->atributo=valor
+        Booleanos los cuales su sintaxis es ->atributo
+        (Para estos funcionan solamente escribiendolos, si existen son verdaderos y si no existen son falsos)
+
+        Ejemplos de atributos comunes son:
+            < meta charset="UTF-8" >
+            < html lan="es"
+        Donde tenemos un atributo al cual se le da un valor.
+    -->
+    <!---->
+    <header>
+        <h1>Atributos</h1>
+    </header>
+    <main>
+        <h2>Atributos globales</h2>
+        <!--
+            Algunos atributos están disponibles para la mayoria de etiquetas HTML
+            Algunas de estas son
+            Class: Este atributo se usa para poder darle estilo al elemento a traves de CSS.
+            ID: Este atributo le da un identificador unico al elemento, el cual sirve tanto para los links como para Java.
+            Title: Este atributa ayuda a la accesibilidad dandole un titulo como tal al elemento, mostrandose en pantalla en un reciadro llamado tooltip.
+           !Data:Es un atributo que nos permite guardar algun valor para los archivos .html y su uso principalmente es al enlazarlo con algun archivo .js  
+        -->
+        <p class="prueba1"> Este es un parrafo en el cual vamos a usar el atributo Class para darle estilo a nuestro elemento</p>
+        <p title="Ejemplo de title">Este parrafo es un ejemplo de title</p>
+        <p id="prueba2">Aqui tenemos un parrafo cuyo atributo es el de id para hacer una identificacion para css, java o links</p>
+        <p id="parrafoprueba" data-ejemplo="datos-de-ejemplo"></p>
+    </main>    
+</body>
+</html>

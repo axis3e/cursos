@@ -1,0 +1,48 @@
+/* En Css contamos con diferentes formas de agregar una caractersitica a los diferentes elementos que nos rpesenta el html, uno de estos selectores es el selector univesal que se representa con un * */
+
+*{
+    background-color: rgb(116, 111, 111);
+    color: white;
+}
+/* Así como tambien contamos con el selector de tipo o etiqueta que vamos a usar con el nombre mismo de la etiqueta */
+h2{
+    color: rgb(32, 25, 25);
+/* Tenemos igualmente la opción de agregar estilo mediante el id, que es representado con el # seguido del id que previamente agregamos en html */
+}
+#select{
+    background-color: rgb(68, 61, 61);
+}
+/* Otra forma de agregar estilo y de una manera más correcta es con el atributo class, el cual se modifica desde CSS de la siguiente maner a */
+
+.clase{
+    color:black;
+    background-color: #fff;
+}
+/* Cuando necesitamos agregarle estilo a elementos que no entran dentro de las descripciones anteriores, como es el caso de los atributos, vamos a usar el siguiente comando */
+
+[href]{
+    color: rgb(0, 0, 0);
+}
+/* Si queremos que un elemento en particular que igualmente use el atributo que ya antes fue designado con ciertas caracteristicas le vamos a agregar el valor del mismo*/
+[href="ahttps://www.youtube.com/watch?v=N8V5JhasaSE&list=PLoUEnpMuJZ3--UmVY8NLHVXvUJQbRMBOO&index=4&t=82sdd"]{
+    color: aquamarine;
+    background-color: red;
+}
+/* De igual maner si queremos agregar una misma caracteristica a todos los archivos que compartan un mismo principio de nombre podemos hacer lo siguiente*/
+[href^=httpsa]{
+    background-color: green;
+}
+/* En caso de que necesitasemos agreagar estilo a más de un elemnto que coincida en algun apartado del nombre (independientemente del lugar del nombre), vamos a usar el * para marcarlo */
+[href*=youtuber]{
+    color: white;
+    background-color: blue;
+}
+/* Y para el casso en que el elemtno sea una palabra al final del atributo, vamos a usar el comando */
+[href$=guagua]{
+    color: darkorchid;
+    background-color: chocolate;
+}
+[lang=en]{
+    color: magenta;
+    background-color: blanchedalmond;
+}

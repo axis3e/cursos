@@ -1,0 +1,94 @@
+/*
+Orden
+Position - Propiedades de posicionamiento
+Box Model - Propiedades del box model
+Text - Propiedades de texto
+Visual - Propiedades visuales (colores, bordes, background...)
+Varios - El resto
+    
+*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin-top: 0;
+    text-align: center;
+    font-weight: 400;
+    background-color: hsl(0, 0%, 93%);
+    font-family: 'Poppins', sans-serif;
+}
+.title{
+    display: block;
+}
+.nigga{
+    font-weight: 600;
+}
+.light{
+    font-weight: 200;
+}
+.subtitle{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cards{
+    position: relative;
+    width: 1200px;
+    height: 550px;
+    margin: 5em auto;
+}
+.card{
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    padding: 0 2em;
+    font-size: .9rem;
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px hsl(240 25% 60% / .2);
+    background-color: hsl(0 0% 93%);
+}
+.gray{
+    color: hsl(229, 6%, 66%);
+}
+.red{
+    border-top: 5px solid red;
+}
+.cyan{
+    border-top: 5px solid cyan;
+}
+.yellow{
+    border-top: 5px solid orange;
+}
+.blue{
+    border-top: 5px solid blue;
+}
+.card-text,
+.card-title{
+    text-align: left;
+
+}
+.top,
+.bottom{
+    margin-left: 420px; 
+}
+.left,
+.right{
+    margin-top: 150px;
+}
+.top{
+    top: 0;
+}
+.left{
+    left: 0;
+}
+.bottom{
+    bottom: 0;
+}
+.right{
+    right: 0;
+}
+.card-logo{
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+}

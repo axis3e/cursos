@@ -1,0 +1,19 @@
+.text1,
+.text2,
+.text3{
+    background-color: aquamarine;
+}
+div .descendiente{
+    background-color: darkviolet;
+}
+.texto + .texto2{
+    background-color: darkseagreen;
+}
+
+.texto2 ~ p{
+    background-color: lawngreen;
+}
+.container > p{
+    color: white;
+    background-color: black;
+}

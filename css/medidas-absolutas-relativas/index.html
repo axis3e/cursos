@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Medidas Absolutas y Relativas</title>
+    </head>
+    <body>
+        <header>
+            <h1>Medidas Absolutas y Relativas</h1>
+        </header>
+        <main>
+            <p>
+                Las medidas en CSS se pueden agrupar en 2 grupos, absolutas y relativas.
+            </p>
+            <section>
+                <header>
+                    <h2>Absolutas</h2>
+                </header>
+                <p>
+                    Las medidas absolutas NO CAMBIAN y siempre mantendrán su tamaño independientemente del dispositivo o la interacción del usuario. <br> 
+                    La más usada es px (píxeles) cuya medida es 1/96 de 1in, pero existen otras como:
+                </p>
+                <ul>
+                    <li>cm(centímetros) -> 1cm = 96px/2,54</li>
+                    <li>mm(milímetros) -> 1mm = 1/10 de 1cm</li>
+                    <li>Q(cuarto de de milímetro) -> 1Q = 1/40 de 1cm</li>
+                    <li>in(inches, pulgadas) -> 1in = 2,54cm = 96px</li>
+                    <li>pc(picas) -> 1pc = 1/16 de 1in</li>
+                    <li>pt(puntos) -> 1pt = 1/72 de 1in</li>
+                </ul>
+            </section>
+            <section >
+                <header>
+                    <h2>Relativas</h2>
+                </header>
+                <p>
+                    Las medidas relativas SIEMPRE dependen de un contexto, son las que se recomienda utilizar en la gran mayoría de ocasiones porque nos van a permitir que todos los elementos escalen proporcionalemnte. <br>
+                    Las más usadas son em, rem, %, vw, vh, vmin y vmax.<br>
+                </p>
+                <article class="re">
+                    <header>
+                        <h3>rem</h3>
+                    </header>
+                        <p>
+                            rem -> Corresponde a la medida de la "m" de la raiz del documento (html). <br>
+                            Esto nace del hecho de que "m" cuenta con el ancho más grande dentro de la tipograia. <br>
+                            De manera estandar un "rem" tiene un tamaño de 16px, lo que quiere decir que poner como unidad de medida el valor rem se traduce en multiplos de 16px:
+                        </p>
+                        <p>
+                            1rem = 16px <br>
+                            2rem = 32px
+                        </p>
+                </article>
+                <article class="re">
+                    <header>
+                        <h3>em</h3>
+                    </header>
+                        <p>
+                            em -> Corresponde a la medida de la "m" del contexto donde nos encontremos. <br>
+                            Es decir, si usamos el atributo &#60;font-size&#62; y le asignamos la medida 2rem, nuestro em dentro de este contexto tendrá una medida de 32px
+                        </p>
+                        <p>
+                            
+                        </p>
+                </article>
+                <p class="re">
+                        NOTA: Tanto "em" como "rem" se calcula en base a la propiedad font-size (tamaño de fuente) <br>
+                        El estandar del tamaño de fuente por defecto en la raiz del documento es 16px, y NO ES RECOMENDABLE MODIFICARLO. 
+                </p>
+            </section>
+            <p class="important">Nota, cuando usemos un position absolute no se debe usar el % ya que entonces, las medidas tomaran como referencia el viewport, más no el contenedor, hablando de Width y Height</p>
+            <section>
+                <header>
+                    <h3>Width En % y Auto</h3>
+                </header>
+                <p>
+                    % -> Cuando usamos porcentaje usamos de referencia el tamaño del contenedor y el navegador calcula ese porcentaje. Esto no ocurre cuando usamos transform.
+                </p>
+                <p>
+                    auto -> Cuando usamos auto le pedimos al navegador que calcule el ancho en función del espacio disponible.
+                </p>
+                <div class="box">
+                    <div class="bch"></div>
+                </div>
+                <pre>
+                    <code>
+                        .box{
+                            width: auto;
+                            height: 150px;
+                            margin-left: 10px;
+                            background-color: white;
+                        }
+                        .bch{
+                            margin-left: 10px;
+                            width: auto;
+                            height: 50%;
+                            background-color: rgb(255, 0, 0);
+                        }                        
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <header>
+                    <h3>Height en % y auto</h3>
+                </header>
+                <p class="text">% -> Cuando estamos dentro de un contenedor, este tiene que tener un alto declarado, si no no podrá calcular el porcentaje. Si se le aplica una medida con porcentaje (si su contenedor no tiene un alto definido) se sustituirá automaticamente por auto.
+                </p>
+                <p class="text2">
+                    auto -> Cuando utilizamos auto el alto lo calculará el navegador en base al contenido del elemento 
+                </p>
+                <div class="he">
+                    
+                    <div class="hch">texto</div>
+                </div>
+            </section>
+            <section>
+                
+            </section>
+                <p>
+                    Aunque tenemos otras como:
+                </p>
+                <ul>
+                    <li>ex -> Altura x de la fuente del elemento.</li>
+                    <li>ch -> La medida del ancho del glifo "0" de la letra del elemento.</li>
+                    <li>lh -> Altura de la línea del elemento.</li>
+                </ul>
+        </main>
+    </body>
+</html>

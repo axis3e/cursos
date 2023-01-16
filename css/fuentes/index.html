@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Raleway:wght@100&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="styles.css">
+        <title>Fuentes</title>
+    </head>
+    <body>
+        <header>
+            <h1>Fuentes</h1>
+        </header>
+        <main>
+            <p>
+                La tipografía es la ciencia que estudia el diseño y uso de los tipos de letra, mientras que las fuentes son los tipos especificos de letra. <br>
+                Al hablar de los tipos de fuente, nos referimos a los glifos, que son cada uno de los dibujos que representan cada simbolo de la fuente, includios los espacios.
+            </p>
+            <p>
+                Los estilos de fuente son las modificaciones que se hacen a las fuentes, como el grosor o la inclinación.
+            </p>
+            <p>
+                Familia Tipografica <br>
+                Son las diferentes fuentes que pertenecen a una misma fuente base. <br>    
+            </p>
+            <p>
+                Y por ultimo, antes de comenzar, debemos recordar que cuando usamos una propiedad text-* estamos afectando a un bloque completo. <br>
+                Mientras que al utilizar una propiedad font-* afectamos a la fuente del texto, lo que quiere decir, que solo serán modificados los caracteres, más no el elemento completo.
+            </p>
+            <section class="pred">
+                <header>
+                    <h2>Fuentes Predeterminadas</h2>
+                </header>
+                <p>
+                    Son las fuentes que se consideran seguras ya que son genéricas y no establecen una familia tipográfica, si no un estilo de fuente.
+                </p>
+                <ul>
+                    <li class="serif">serif: Fuentes que tienen serifas (adornos en los caracteres)</li>
+                    <li class="sans">sans-serif: Fuentes sin serifas</li>
+                    <li class="mono">monospace: Fuentes que tienen el mismo espaciado entre todos sus caracteres</li>
+                    <li class="cursive">cursive: Fuentes que pretenden emular escritura a mano, con ligaduras y trazos fluidos
+                    </li>
+                    <li class="fantasy">fantasy: Fuentes que suelen ser decorativas</li>
+                </ul>
+            </section>
+            <section class="fonts">
+                <header>
+                    <h2>Fuentes desde servidor remoto</h2>
+                </header>
+                <p>
+                    Son fuentes que se encuentran en un servidor y que nosotros descargamos para su uso, la más famosa es Google Fonts
+                </p>
+                <p>
+                    Siempre que utilicemos fuentes no genéricas, debemos poner fuentes genéricas de fallback (respaldo)
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia deleniti odio animi quod necessitatibus nostrum, voluptatum, possimus id autem numquam alias omnis natus atque laborum reprehenderit nesciunt magnam, quibusdam recusandae.</p>
+            </section>
+            <section class="icons">
+                <header>
+                    <h2>Google Icons</h2>
+                </header>
+                <p>
+                    Los iconos de google funcionan de la misma manera que el texto, se le puede agregar las mismas caracteristicas que al texto desde CSS 
+                </p>
+                <span class="material-symbols-outlined icon">
+                    sentiment_dissatisfied
+                </span>
+                <p>
+                    Tambien podemos descargar el svg y cambiar la configuración desde el mismo archivo mediante la etiqueta &#60;fill&#62; <br>
+                </p>
+                <img src="assets/icons/sad.svg" alt="">
+            </section>
+            <section class="fontface">
+                <header>
+                    <h2>Font Face</h2>
+                </header>
+                <h3>
+                    Formatos para fuentes
+                </h3>
+                <ul>
+                    <li>True Type Font (TTF) -> Fue el primer formato estándar.</li>
+                    <li>Open True Type Font (OTF) -> Facilita o implementa la creación de las curvas.      </li>
+                    <li>Web Open Font Format (WOFF) (WOFF2) -> Es un formato mucho más ligero y mejora el rendimiento. Funciona a través de metadatos. WOFF tiene soporte total y WOFF2 no funciona en internet explorer.</li>
+                    <li>Scalable Vector Graphics (SVG) -> Para efectos y animaciones sobre el texto, no es recomendable usarlo en el texto genérico de la web, tiene muchos problemas.</li>
+                    <li>Embedded Open Type (EOT) -> Primer formato digital propuesto para sitios WEB y es comprimido. Se quedó como una propuesta pero no pasó a ser un estándar.</li>
+                </ul>
+                <h3>Regla @font-face</h3>
+                <p>
+                    Esta es la forma de utilizar fuentes que tenemos descargadas y que no traemos de un servidor remoto, cuando usamos google fonts, esto es lo que está pasando por detrás.
+                </p>
+                <p>
+                    La sintaxis es:
+                </p>
+                <pre>
+                    @font-face { <br>
+                        font-family: Nombre de la familia, se lo asignamos nosotros;<br>
+                        src: aquí pondremos dos tipos de valores. <br>
+                           local() -> pondremos el nombre de la fuente para buscarla
+                           en el ordenador el usuario, de esa forma podremos evitar
+                           descargarla <br>
+                           url() -> Si no encontramos esa fuente procederemos a 
+                           descargarla. <br>
+                           Existe otro valor, menos usado que es format <br>
+                           format() -> Este valor lo pasaremos de forma opcional
+                           si queremos ser más específicos con la fuente que vamos
+                           a buscar o descargar, si no lo ponemos cogerá el primer
+                           formato soportado, si lo ponemos sólo usará el que
+                           hemos establecido, y si no lo encuentra no hará nada. <br>
+                     }
+                </pre>
+                </section>
+                <section class="transform">
+                    <header>
+                        <h2>Transformaciones y Adorno de texto</h2>
+                    </header>
+                    <h3>Transformación</h3>
+                        <p>
+                            Text-transform: Esta propiedad nos permite hacer transformaciones ESTÉTICAS en nuestro texto.
+                        </p>
+                        <p>Admite los valores</p>
+                        <ul>
+                            <li class="tr1">none: No se aplicará ninguna transformación.</li>
+                            <li class="tr2">uppercase: El texto se pondrá en mayúsculas
+                            </li>
+                            <li class="tr3">lowercase: El texto se pondrá en minúsculas</li>
+                            <li class="tr4">capitalize: Transforma la primera letra de cada palabra en mayúscula.</li>
+                        </ul>
+                    <h3>Adornos</h3>
+                        <p>
+                            Text-decoration: Esta propiedad nos permite controlar la línea que podemos poner en los textos.
+                        </p>
+                        <p>Admite los valores</p>
+                        <ul>
+                            <li class="td3">overline: Coloca una linea sobre el texto.</li>
+                            <li class="td2">underline: Coloca una linea bajo el texto.</li>
+                            <li class="td4">line-through: Coloca una linea tachando el texto</li>
+                            <li class="td1">none: Elimina cualquier línea.</li>
+                        </ul>
+                        <div class="shadow">
+                            <p class="shadow">
+                                Text-shadow: Funciona exáctamente igual que box-shadow, con la única diferencia de que no admite el valor inset ni la expansión de la sombra
+                            </p>
+                            <p>Admite los valores</p>
+                            <ul>
+                                <li>offsetX: desplazamiento horizontal.</li>
+                                <li>offsetY: desplazamiento vertical</li>
+                                <li>blur: desenfoque.</li>
+                                <li>color: color, por defecto coge el del texto.</li>
+                            </ul>
+                        </div>
+                   <h3>Espaciado en fuentes y textos</h3>
+                        <ul>
+                            <li class="ls">letter-spacing: Establece la separación entre caracteres, se puede establecer en cualquier medida válida para CSS</li>
+                            <li class="ws">word-spacing: Establece la separación entre palabras, se puede establecer en cualquier medida válida para CSS
+                            </li>
+                            <li class="lh">line-height: Establece el alto de cada línea, se puede dar una medida concreta o se puede poner un número que se multipliará por el font size del texto al que se lo estemos aplicando.</li>
+                    <h3>Orientación del texto.</h3>
+                    <p class="wm">
+                        writing-mode: Establece la dirección del texto <br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur magnam iure delectus natus perspiciatis, sapiente quo nostrum impedit. Autem unde esse, provident voluptatibus repellat tempore ducimus delectus fugit aut porro?
+                    </p>
+                </section>
+        </main>
+    </body>
+</html>
