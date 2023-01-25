@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript</title>
+    </head>
+    <body>
+        <header>
+            <h1>Sintaxis de  JavaScript</h1>
+        </header>
+        <main>
+            <p>JavaScript es un lenguaje de programación que actualmente estaá presente en basicamente en todos los sitios web, ya que su función en ellos es el de darles interactividad.</p>
+            <p>En este curso vamos a aprender a usarlo y a trabajar con él incluyendolo en el html y el css.</p>
+            <h2>Sintaxis</h2>
+            <p>Para empezar debemos recordar que es case-sensitive lo que implica que distingue entre mayusculas y minusculas</p>
+            <p>El tipado es de tipo debil o dinamico, lo que implica que en una variable podemos incluir tanto numeros como letras</p>
+            <p>Una practica bastante recomendad es el de usar ";" al finalizar cada sentencia, ya que em otros lenguajes es necesario, aunque aquí no es obligatorio</p>
+            <p>Cada bloque se cierera con una llave de cierre "}" y de la misma manera opcionalmente podemos agregar el ";"</p>
+            <p>Una variable es un espacio que reservamos para almacenar datos que podemos cambiar durante la ejecucuión del programa, la manera correcta de declarase es con la keyword "let"</p>
+            <p>De igual manera, una cosntante es un espacio reservado pero para un dato que no va a cambiar en ningun momento, la keyword para declararla es "const"</p>
+            <p>El scope (ambito) es el espacio en el que nuestras declaraciones (let o const) existen, si en un bloque declaramos una let, ese será nuestro scope, fuera de este bloque, nuestra let no existe</p>
+            <h2>Declaración, inicialización y modificación</h2>
+            <p>Una variable se declara usando el siguiente comando</p>
+            <code>
+                let varible;
+            </code>
+            <p>Como podemos ver, abrimos declarando que tenemos una varible, seguido del nombre de nuestra variable y terminamos con un ";"</p>
+            <br>
+            <p>Para inicializar nuestra variable usamos la estructura </p>
+            <code>
+                variable = valor;
+            </code>
+            <p>Aquí se nota que la estructura es el nombre que anteriormente asiganamos a nuestra varable, seguido del simbolo "=" y con el valor de nuestra variable por delante</p>
+            <br>
+            <p>De la misma manera podemos declarar e inicializar nuestra variable en la misma sentencia:</p>
+            <code>
+                let variable = valor;
+            </code>
+            <p></p>
+            <br>
+            <p>Si quisieramos modificar una variable lo haremos de la siguiente manera:</p>
+            <code>
+                variable = valornuevo;
+            </code>
+            <p>Esto aplica siempre y cuando estemos dentro del scope de nuestra variable, fuera de ella marca error, ya que nuestra variable ya no existe.</p>
+            <br>
+            <p>Para el caso de las constantes solo podemos usar una sentencia para declarar e inicializarla, posteriormente no podemos hacer ninguna modificación, ya que son constantes los valores</p>
+            <code>
+                const constante = valor;
+            </code>
+            <h2>Tipos de Datos</h2>
+            <h3>Primitivos</h3>
+            <p>Numeros -> let numero = 3</p>
+            <p>Strings (cadenas) -> let palabra = "soy una string"</p>
+            <p>Boolean -> let respuesta = true, let respuesta = false</p>
+            <script src="sintaxis.js"></script>
+            <pre>
+                <code>
+                    let numero = 5;
+                    let palabra = "Soy una variable";
+                    let string = "Soy un string"
+                    const constante = "Soy una cosntante"
+                    palabra = "palabrerias"
+                    
+                    console.log(numero);
+                    console.log(palabra);
+                    console.log(string);
+                    console.log(constante);
+                </code>
+            </pre>
+        </main>
+
+    </body>
+</html>
