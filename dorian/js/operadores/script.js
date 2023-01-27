@@ -16,7 +16,7 @@ b = 3;
 console.log(a/b)
 
 let user = "axis"
-console.log("que me ves pinche " + user)
+console.log("que me ves " + user)
 
 
 /* Operadores de asignación */
