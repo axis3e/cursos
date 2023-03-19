@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        /* El nth-child dentro de CSS indica el "niño" o "hijo" que tiene un atributo */
+        col:nth-child(2){
+            background-color:red
+        }
+        col:nth-child(1){
+            background-color: gray;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Pruebas de tablas y formularios</title>
+</head>
+<body>
+    <header>
+        <h1>Prueba de tablas y formularios</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Tablas</h2>
+            <p>
+                Con este documento vamos a empezar un repaso sobre los documentos que más me fallaron a la hora de estudiarlos, en este particular, las tablas
+            </p>
+            <p>
+            Para crear tablas, debemos entender que la etiqutea &#60;tr&#62; nos sirve para iniciar una nueva fila,
+            mientras que la etiqutea &#60;th&#62; sirve para ir creando las columnas, por tal motivo, al iniciar 
+            una nueva fila, vamos a anidar las columnas dentro de las filas, las cuales se van agregando celda por celda.
+            </p>
+            <section>
+                <h3>Diseño basico</h3>
+                <table>
+                    <!-- °Para crear una tabla, vamos a iniciar con la etiqutea <table>, esta es la que va a anidar nuestra tabla completa. -->
+                    <caption>Titulo de tabla (caption)</caption>
+                    <!-- !Para agregar un titulo a nuestra tabla, vamos a usar la etiqueta <caption> inmediatamente despues de usar <table> -->
+                    <thead>
+                        <!-- #la etiqueta <thead> indica que estamos en la cabecera de nuestra tabla y que vamos a poder agregar nuestros cabezales para cada columna -->
+                        <tr>
+                            <th>Cabezal 1 (th)</th>
+                            <th>Cabezal 2 (th)</th>
+                            <th>Cabezal 3 (th)</th>
+                            <th>Cabezal 4 (th)</th>
+                            <th>Cabezal 5 (th)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- $<tbody> es el cuerpo de nuestra tabla -->
+                        <tr> <!--%El tr sirve para crear filas, las filas van en horizontal, con cada tr agregamos una celda hacia abajo ya que ,arcan el incio de la misma-->
+                            <td>Fila 1 (tr)</td>
+                            <td>Columna (td)</td> <!--&El td sirve para crear las columnas, las columnas van en horizontal. Es decir que por cada th que creemos agregamos una celda hacia la derecha-->
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                        </tr>
+                        <tr>
+                            <td>Fila 2 (tr)</td>
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                        </tr>
+                        <tr>
+                            <td>Fila 3 (tr)</td>
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                        </tr>
+                        <tr>
+                            <td>Fila 4 (tr)</td>
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                            <td>Columna (td)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>Colspan y Rowspan</h3>
+                <table>
+                    <caption>Ejemplo de colspan y rowspan</caption>
+                    <thead>
+                        <tr>
+                            <th>Cabezal1</th>
+                            <th>Cabezal2</th>
+                            <th>Cabezal3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- Dentro del <td> vamos a agregar ya sea el atributo colspan o rowspan, colspan para más de una columna y rowspan para mas de una fila -->
+                            <td colspan="3">Segmento con &#60;Colspan&#62;</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Segmentoprueba</td>
+                            <td rowspan="2">Segmento con &#60;rowspan&#62;</td>
+                            <td>Segmento prueba</td>
+                        </tr>
+                        <tr>
+                            
+                            <td>Segmentoprueba</td>
+                            <td>Segmentoprueba</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <!-- Para seleccionar una columna tenemos la etiqueta <colgroup>, la cual nos va a permitir seleccioonar columnas en concreto. Dentro tendremos la etiqueta <col> con la cual agregaremos tantas como columnas tengamos, para seleccionar mas de una columna tenemos el atributo span que funciona igual que en rowspan y colspan-->
+                <h3>Selección de columnas</h3>
+                <table>
+                    <caption>Selección de columnas(colgroup)</caption>
+                    <colgroup>
+                    <col span="2">
+                    <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Cabezal1(colgroup)</th>
+                            <th>Cabezal2(colgroup)</th>
+                            <th>Cabezal3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Segmento1(Colgroup)</td>
+                            <td>Segmento2(Colgroup)</td>
+                            <td>Segmento3</td>
+                        </tr>
+                        <tr>
+                            <td>Segmento4(Colgroup)</td>
+                            <td>Segmento5(Colgroup)</td>
+                            <td>Segmento6</td>
+                        </tr>
+                        <tr>
+                            <td>Segmento7(Colgroup)</td>
+                            <td>Segmento8(Colgroup)</td>
+                            <td>Segmento9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+        <article>
+            <h2>Formularios</h2>
+            <p>En este apartado vamos a continuar con el tema de los formularios </p>
+            <section>
+                <form>
+                    <label for="input">Nombre</label>
+                    <input type="text"  id="input" placeholder="Pone tu name acá">
+                    <input type="submit" value="Enviar" >
+                </form>
+            </section>
+        </article>
+
+    </main>
+</body>
+</html>
