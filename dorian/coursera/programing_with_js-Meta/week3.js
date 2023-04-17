@@ -241,7 +241,7 @@ class Train {
         this.lightsOn = lightsOn;
     }
     vagon(){
-        console.log(vagon1)
+        console.log("vagon1")
     }
     riel(){
         console.log(riel1)
