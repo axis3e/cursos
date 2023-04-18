@@ -247,5 +247,6 @@ class Train {
         console.log(riel1)
     }
 }
+
 var chuchu = new Train ("red", "false");
 console.log(chuchu)
