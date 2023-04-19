@@ -27,7 +27,6 @@ if(num>0){
 "And" &&
 "Or" ||
 
-*/
 let num1 = 0
 let num2 = 0
 
@@ -55,4 +54,37 @@ if(num1>0){
         }else{
             console.log(`${num1} y ${num2} son iguales a 0`)
         }
+}
+
+!Ejercicio
+
+*/
+const numbers =  document.getElementById(`numbers`);
+const result = document.getElementById(`result`);
+
+let a = prompt(`Agrega tu número prro`);
+let b = prompt(`Agrega otro sin miedo cainal`);
+let c = prompt(`Sigamos, echame el ultimo`);
+
+numbers.textContent = `Me pusiste estos números perrillo ${a}, ${b} y ${c}`
+
+if(a>=b && a>=c){
+    if(b>c){
+        result.textContent = `El más grandecito es ${a}, le sigue ${b} y terminamos con ${c} que está chiquito`
+    }else{
+        result.textContent = `El más grandecito es ${a}, le sigue ${c} y terminamos con ${b} que está chiquito`
+    }
+}else if(b>=a && b>=c){
+    if(a>c){
+        result.textContent = `El más grandecito es ${b}, le sigue ${a} y terminamos con ${c} que está chiquito`
+    }else{
+        result.textContent = `El más grandecito es ${b}, le sigue ${c} y terminamos con ${a} que está chiquito`
+    }
+}else{
+    if(a>b){
+    result.textContent = `El más grandecito es ${c}, le sigue ${a} y terminamos con ${b} que está chiquito`
+    }else{
+        result.textContent = `El más grandecito es ${c}, le sigue ${b} y terminamos con ${a} que está chiquito`
+    }
+
 }
