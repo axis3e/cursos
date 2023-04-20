@@ -98,7 +98,7 @@ if (posicion == "primero"){
 */
 
 
-//switch
+///switch
 /*
 var distance = 3;
 
@@ -126,7 +126,8 @@ if (edad>=65){
 }
 
 */
-/*var day = "lun";
+/*
+var day = "lun";
 
 switch(day){
     case "lun":
@@ -152,7 +153,8 @@ switch(day){
         break
     default:
         console.log("Quien sabe que perro día sea")
-}*/
+}
+*/
 //#Loops
 /*
 $For
