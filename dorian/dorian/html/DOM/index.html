@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="">
+        <title>DOM</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="title" class="title">¿Qué es el DOM? </h1>
+        </header>
+        <main>
+            <article>
+                <section>
+                    <ul>
+                        <li>
+                            El DOM es el Document Object Model, lo que implica que es toda la estructura HTML del documento 
+                        </li>
+                        <li>
+                            No es parte de de JS, es más bien una API que conecta Js con HTML
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <p>
+                        La forma de representarlo es mediante un "arbol", del cual se desprenden diferentes ramas como en el ejemplo
+                    </p>
+                    <img src="Captura desde 2023-06-03 22-53-17.png" width="50%" alt="dom" >
+                </section>
+            </article>
+            <article>
+                <h2>Nodos</h2>
+                <section>
+                    <p>
+                        Cada parte del arbol, es un nodo. <br>
+                        Si bien podriamos llamarlo objeto (ya que cada etiqueta del html es un objeto), lo correcto es denominarle "nodo", y tenemos tres pricipales tipos de nodo:
+                        <ul>
+                            <li>Element Node (cualquier etiqueta HTML)</li>
+                            <li>Text node (el contenido de la etiqueta)</li>
+                            <li>Comment node (cualquier comentario en html)</li>
+                        </ul>
+                    </p>
+                </section>
+            </article>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

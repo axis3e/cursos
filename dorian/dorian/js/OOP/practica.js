@@ -58,6 +58,6 @@ const showGenders = () =>{
         }
     }
 }
-//todosLibros();
-//showAuthors();
+todosLibros();
+showAuthors();
 showGenders();
