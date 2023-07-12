@@ -1,0 +1,1 @@
+console.log(`El navegador no está soportando importación de módulos`);
