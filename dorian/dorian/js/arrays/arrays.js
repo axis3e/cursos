@@ -21,6 +21,7 @@ let num = 5;
 console.log(Array.isArray(num));
 let nums = [1,2,3,4,5];
 console.log(Array.isArray(nums));
+
 ° .shift / .pop
 | Eliminan el primer y el ultimo elemento de nuestro array respectivamente
 let number =[1,2,3,4,5,6,7,8,9,10]
@@ -29,6 +30,7 @@ number.pop();
 console.log(number);
 number.shift();
 console.log(number)
+
 ° .push / .unshift
 | Añaden uno o más elementos al final y al inicio de nuestro array
 let num = [1,2,3,4,5,6];
@@ -37,25 +39,30 @@ num.push(7,8,9,10);
 console.log(num);
 num.unshift(-2,-1,0)
 console.log(num)
+
 ° .indexof()
 | Devuelve el primer índice del elemento que coincida con el valor especificado, o -1 si ninguno es encontrado.
 let palabra = ["parangaricutirimicuraro", "pasa", "reno"];
 console.log(palabra);
 console.log(`La palabra ${palabra[2]} está en la posición ${palabra.indexOf("pasa")+1}`);
+
 ° .lastIndexOf
 | Devuelve el último índice del elemento que coincida con el valor especificado, o -1 si ninguno es encontrado.
 let num =[1,2,3,4,5,4,3,2,1];
 console.log(num.lastIndexOf(2));
+
 ° .reverse
 |Invierte el orden de los elementos 
 let nums = [1,2,3,4,5,6];
 console.log(nums);
 console.log(nums.reverse());
+
 ° .join (separador)
 | Devuelve una string con el separador que indiquemos
 let nums =[1,2,3,4,5,6];
 console.log(nums)
 console.log(nums.join(` ~ `))
+
 ° .splice(a, b, items)
 | Cambia elementos de un array eliminando y/o agregando nuevos (indice de inicio, numero de elementos, elementos a añadir)
 let nums =[1,2,3,4,5,6];
@@ -76,6 +83,7 @@ console.log(nam);
 nam.splice(6,0,7,8);
 console.log(nam)
 /a partir de la sexta posición agrega los elementos definidos
+
 ° .slice
 |Extrae elementos de un array desde el índice a hasta el índice b. Si no existe b lo hace desde a hasta el final, si no existe ni a ni b hace una copia del original.
 

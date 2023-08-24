@@ -2,9 +2,10 @@
 /*
 Operador de expansión, su sintaxis es "..."
 
+*/
 const numbers = [2,3,4,5,6,7]
 console.log(...numbers)
-*/
+
 /*
 |Enviar elementos de un array a una función
 
