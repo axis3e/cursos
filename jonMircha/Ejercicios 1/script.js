@@ -463,7 +463,7 @@ const arer = (...evaluar) =>{
     const evaluados = [...new Set(evaluar)]
     console.log(evaluados);
 }
-arer(10,10,"b","A","a","b",1)
+//arer(10,10,"b","A","a","b",1)
 /*
 (26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
  */
@@ -478,22 +478,68 @@ const media =(...valores)=>{
 
 La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
   - Todos los datos del objeto son obligatorios.
-  - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 
-     7 restantes números.
+  (- Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
   - Valida que el título no rebase los 100 caracteres.
   - Valida que el director no rebase los 50 caracteres.
   - Valida que el año de estreno sea un número entero de 4 dígitos.
   - Valida que el país o paises sea introducidos en forma de arreglo.
   - Valida que los géneros sean introducidos en forma de arreglo.
-  - Valida que los géneros introducidos esten dentro de los géneros 
-     aceptados*.
-  - Crea un método estático que devuelva los géneros aceptados*.
-  - Valida que la calificación sea un número entre 0 y 10 pudiendo ser 
-    decimal de una posición.
-  - Crea un método que devuelva toda la ficha técnica de la película.
-  - Apartir de un arreglo con la información de 3 películas genera 3 
+  (- Valida que los géneros introducidos esten dentro de los géneros 
+  (   aceptados*.
+  (- Crea un método estático que devuelva los géneros aceptados*.
+  (- Valida que la calificación sea un número entre 0 y 10 pudiendo ser 
+  (  decimal de una posición.
+  (- Crea un método que devuelva toda la ficha técnica de la película.
+  (- Apartir de un arreglo con la información de 3 películas genera 3 
     instancias de la clase de forma automatizada e imprime la ficha técnica 
     de cada película.
 
 * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
  */
+/* Todo está mal, no se puede resolver con el ejemplo
+class movie {
+    constructor (idIMDB, title, director, year, country, gender, clasIMDB){
+        this.idIMDB = idIMDB;
+        title;
+        director;
+        year;
+        country;
+        gender;
+        clasIMDB;
+
+        this.validarIMDB = this.validarCadena;
+    }
+
+    validarCadena(propiedad, valor){
+        if(!valor) throw new Error(`${propiedad} está vacío`)
+        if(typeof valor !== "string") throw new Error(`${propiedad} "${valor}" no es una caddena de texito`)
+
+        return true
+    }
+
+    validarIMDB(idIMDB){
+        if(this.validarCadena("IMDB id", idIMDB))
+        if(!/{^([a-z])[2]([0-9])[7]$/.test(idIMDB))
+            console.log(`IMDB id "${id}" no es válido debe tener 9 caracteres. los dos primeros letras minusculas seguidas de 7 numeros`)
+
+    }
+    /*validar(){
+        if(
+                this.idIMDB  === undefined
+            ||  this.title === undefined
+            ||  this.director === undefined
+            ||  this.year === undefined
+            ||  this.country === undefined
+            ||  this.gender === undefined
+            ||  this.clasIMDB === undefined
+            ) throw new Error(`Por favor ingresa los datos de manera completa y en orden: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD`);
+        
+        if(this.title.length > 100 || this.director.length > 50)
+            throw new Error(`El limite máximo de caracteres ha sido superado`);
+        if(isNaN(this.year) || this.year.length !== 4 || !(Number.isInteger(this.year))) 
+            throw new Error(`Por favor ingresa un numero de 4 digitos`)
+        if(this.country instanceof  Array) throw Error (`Por favor ingresa el país en forma de arreglo`)
+        if(this.gender instanceof  Array) throw Error (`Por favor ingresa el genero en forma de arreglo`)
+        
+}
+*/
