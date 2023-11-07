@@ -45,5 +45,92 @@ console.log(Object.getOwnPropertySymbols(person));
 */
 //| Sets
 /*
-? 
+    ? Los sets son estructuras de datos unicos, es similar a un array. Por decirlo de otra manera, un Set es un tipo de arreglo mejorado de Js que unicamente acepta elementos unicos.
+    
+    const arr = [1,1,1,`e`, "e", 2,2,2,"x","x",3,4,5,6,"x"],
+    newarresp = new Set(arr);
+
+    console.log(newarresp);
+
+    ? Para conocer la longitud de nuestro set, usamos el atributo size
+    console.log(newarresp.size);
+
+    ?Para agregar elementos a un set ya creado usamos el atributo add
+    const setnew = new Set();
+    setnew.add(1)
+    setnew.add(1)
+    setnew.add(2)
+    setnew.add(3)
+    setnew.add("asa")
+    setnew.add("a")
+    setnew.add("casa")
+    setnew.add("dasa")
+    setnew.add(true)
+    console.log(setnew);
+
+    ? PAra poder eliminar datos de un set, tenemos la propiedad delete
+    setnew.delete("dasa")
+    console.log(setnew);
+
+    ? Para poder ubicar un elemento unico de un set, es necesario convertir el set en un array y apara ello tenemos el metodo from
+    let from = Array.from(setnew)
+    console.log(from[3]);
+
+    ? Para poder comprobar la existencia de un valor en un set, tenemos la propiedad has
+    console.log(setnew.has("asa"));
+
+    ? Para "limpiar" un set, podemos hacer uso de clear para vaciarlo
+    setnew.clear()
+    console.log(setnew)
 */
+//| Maps
+/*
+    ? Son obejtos que sirven para almacenar conjuntos de valores asociados a manera de objeto (es basicamente un objeto primitivo)
+
+    ? Para agregar un dato una vez creado el mapa, podemos hacer uso de set y requiere una key y un value
+        let map = new Map();
+        map.set("name", "axis");
+        map.set("lastname", "3e")
+        map.set("age", 23);
+        map.set("colorcast", "concept")
+
+    ? Las propiedades son bastante similares a las de los stes, podemos usar size, has, delete y get para mostrar un unico valor
+        console.log(map);
+        console.log(map.size);
+        console.log(map.has("names"));
+        console.log(map.get("name"));
+
+        map.set("name", "axis3e")
+
+        console.log(map);
+
+        map.delete("lastname")
+
+        console.log(map);
+
+    ? Al ser un obejto itereable podemos recorrerlo con for of
+        for([key, value] of map){
+            console.log(`key ${key}, value ${value}`);
+        }
+
+    ? Con maps podemos crear valores de todo tipo, booleans, numbers, objects, undefined...
+        map.set(false, "false")
+        map.set(18, `dieciocho`)
+        map.set(undefined, "undefined")
+        console.log(map);
+
+    ? Para poder agregar valores desde su inicialización, necesitamos hacer uso de corchetes para agregar cada par de elementos
+        const Map2 = new Map([
+            ["tea", "black"],
+            ["topping", "tapioca"],
+            ["Ice",2],
+            ["sugar", 3]
+        ])
+        console.log(Map2);
+
+    ? Para poder hacer uso de los elementos particulares tenemos las propiedades keys y values
+        const keys = [...Map2.keys()],
+            values = [...Map2.values()];
+        console.log(keys, values);
+*/
+//|
