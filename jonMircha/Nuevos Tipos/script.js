@@ -133,4 +133,105 @@ console.log(Object.getOwnPropertySymbols(person));
             values = [...Map2.values()];
         console.log(keys, values);
 */
-//|
+//| Weaksets y Weakmaps
+/*
+
+    ? Los weaksetes y weakmaps son como los hermanos menores de los mpas y los sets yse caracterizan por el hecho de que no pueden almacenar sino refrencias debiles, es decir que las llaves deben ser de tipo objeto y al ser debiles, les permiten al recolector de basura del navegador limpiarlas y hacer mas fluida la ejecución. En otras palabras, solompueden recibir datos de tipo object
+    
+    ? Los weaksets y los weakmaps no son elementos iterables, tampoco podemos elminar elementos globales, y tampoco agregar más de un elemento a la vez
+
+        const setdebil = new WeakSet()
+        //setdebil.add("a")
+        let object1 = {"hola":21};
+        let object2 = {"k":14};
+        let object3 = {"ase": 6}
+        setdebil.add(object1);
+        setdebil.add(object2);
+        setdebil.add(object3);
+        console.log(setdebil);
+        
+        
+        const mapdebil = new WeakMap()
+        let key1 = {},
+            key2 = {},
+            key3 = {};
+        
+        mapdebil.set(key1, 1)
+        mapdebil.set(key2, 2)
+        console.log(mapdebil);
+*/
+//| Iterators
+/*
+    ? Podriamos decir que una iteración es una vuelta en el recorrido de un ciclo. Cuando hablamos de un elemento iterable, hablamos de una estructura de datos cuyos elementos pueden recorrerse. A su vez el iterador podriía decirse que es precisamente el "apuntador" que está recorriendo el elemento iterable.
+
+    ? JS tiene una función especial destinada precisamente al recorrido de iterables con un iterador especial y funciona básicamente así:
+    
+    const iterable = [1,2,3,"a","b","c"],
+        iterable2 = [1,2,2,2,5,6,5,5,3,4,5,6,7,"a","b","c"],
+        iterador = iterable[Symbol.iterator](),
+        iterador2 = iterable2[Symbol.iterator](),
+        iterador3 = (new Set(iterable2))[Symbol.iterator]();
+    
+    console.log(iterable);
+
+    ? Aquí vamos a estar recibiendo la información sobre nuestro iterable
+    console.log(iterador);
+    console.log(iterador2);
+
+    ? Con next vamos a recibir el valor que estamos teniendo en la posición y un boolean que nos refiera si con este elemento termina nuestro iterable 
+    //console.log(iterador2.next())
+    //console.log(iterador2.next())
+    //console.log(iterador2.next())
+    //console.log(iterador2.next())
+    //console.log(iterador2.next())
+    //console.log(iterador2.next())
+    //console.log(iterador2.next())
+    
+    let next = iterador.next()
+    while(!next.done){
+        console.log(next.value);
+        next = iterador.next()
+    }
+    
+    let next2 = iterador3.next()
+    while(!next2.done){
+        console.log(next2.value);
+        next2=iterador3.next()
+    }
+*/
+//| Generators
+/*
+    ? Los generators son en esencia una funcion que nos permite trabajar de manera más amigable con iteradores, dicho de otra manera, son una interfaz que permiten una interaccion más sencilla con los iteradore.
+
+    ? Aquí lo que estamos haciendo es volver iterable nuestra funcion con el * a un lado de la decalaracion function, una vez hecho esto, lo que seguimos haciendo es crear los elementos que se detectarán como iterables con la pálabra reservada yield, basicamente le estamos diciendo al navegador cual es el "tope" donde va a detenerse en cada vuelta
+    
+    function* func () {
+        yield "hola";
+        console.log("Hola consola");
+        yield "Hola2";
+        console.log("Seguimos con más instrucciones de nuestros codigos");
+        yield [1,2,3,4,5,6,7,8];
+        yield "Hola4"
+    }
+    
+    let function2 = func(),
+        count = 1
+    
+    function2.next()
+    console.log(function2.next());
+    console.log(function2.next());
+    
+    for(i of function2){console.log(`${i} y ${count++}` + i); function2 = func() }
+    
+    ? Para poder usar la información de una function iterable en un arreglo podemos hacer uso de spreed operator
+    
+        const arr = [...func()]
+        console.log(arr);
+    
+    ? Como practica personal estamos dando log de un generator con informacion dinamica usando parametros que ingresamos directamente en el log
+*/
+function* iteration (user, lastname){
+    yield `Usuario:${user}, apellido:${lastname}`
+}
+
+console.log(...iteration("axis", "3e"));
