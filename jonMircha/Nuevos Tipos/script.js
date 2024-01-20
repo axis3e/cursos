@@ -229,9 +229,33 @@ console.log(Object.getOwnPropertySymbols(person));
         console.log(arr);
     
     ? Como practica personal estamos dando log de un generator con informacion dinamica usando parametros que ingresamos directamente en el log
+    
+        function* iteration (user, lastname){
+            yield `Usuario:${user}, apellido:${lastname}`
+        }
+        
+        console.log(...iteration("axis", "3e"));
 */
-function* iteration (user, lastname){
-    yield `Usuario:${user}, apellido:${lastname}`
-}
+//| Proxies
+/*
+    ? Un proxie es un nuevo mecanismo que permite crear un nuevo objeto basado en un objeto literal incial 
+    (Segun lo que entendí basicamente creas una copia y un "manejador" que va a verificar que la copia cumpla ciertas caracteristicas, una vez que estas caracteristicas se cumplen, pasa la info de la copia a la original creo (?) )
+    const person = {
+    name: "",
+    lastname: "",
+    age: 0
+},
+    handler = {
+        Set(obj, prop, value){
+            obj[prop] = value;
+        }
+},
+    atsis = new Proxy(person, handler);
+atsis.name = "axis"
+atsis.lastname = "3e"
+atsis.age = 23
 
-console.log(...iteration("axis", "3e"));
+console.log(atsis);
+            */
+
+
